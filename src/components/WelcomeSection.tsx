@@ -1,7 +1,6 @@
 import React from 'react';
 
 type WelcomeSectionProps = {
-  // Si necesitas pasar alguna propiedad al componente, puedes definirla aquí
 };
 
 const WelcomeSection: React.FC<WelcomeSectionProps> = () => {
