@@ -5,7 +5,7 @@ const ContactSection: React.FC = () => {
     <section id="contact" className="contact-section">
       <h2 className="contact-header">Contact me</h2>
       <div className="contact-list">
-        <a aria-label="Chat on WhatsApp" id="profile-link" className="buttons contact-via" href="https://wa.me/5493413555676/?text=I'm%20interested%20in%20your%work!" target="_blank">
+        <a aria-label="Chat on WhatsApp" id="profile-link" className="buttons contact-via" href="https://wa.me/5493413555676/?text=I'm%20interested%20in%20your%20work!" target="_blank">
           <i className="fab fa-whatsapp"></i>
         </a>
         <a aria-label="Send a mail" id="profile-link" className="buttons contact-via" href="mailto:arianracca@gmail.com">
