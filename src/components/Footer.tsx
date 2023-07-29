@@ -14,7 +14,7 @@ const Footer: React.FC = () => {
           <a href="#">Contact</a>
         </li>
       </ul>
-      <span>Arian Racca 2020.</span>
+      <span>Arian Racca 2020</span>
     </footer>
   );
 };

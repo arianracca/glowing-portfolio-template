@@ -1,9 +1,8 @@
-// Navbar.tsx
 import { Navbar, Nav } from 'react-bootstrap';
 
 const CustomNavbar = () => {
   return (
-    <Navbar bg="dark" expand="lg" variant="dark">
+    <Navbar expand="lg" variant="dark">
       <Navbar.Toggle aria-controls="navbar-nav" />
       <Navbar.Collapse id="navbar-nav">
         <Nav className="mr-auto">

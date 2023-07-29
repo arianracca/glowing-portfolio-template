@@ -4,19 +4,18 @@ const ContactSection: React.FC = () => {
   return (
     <section id="contact" className="contact-section">
       <h2 className="contact-header">Contact me</h2>
-      <p className="subtitle">and let's work together</p>
       <div className="contact-list">
-        <a id="profile-link" className="buttons contact-via" href="https://api.whatsapp.com/send?phone=5493413555676" target="_blank">
-          <i className="fab fa-whatsapp"></i> Whatsapp
+        <a aria-label="Chat on WhatsApp" id="profile-link" className="buttons contact-via" href="https://wa.me/5493413555676/?text=I'm%20interested%20in%20your%work!" target="_blank">
+          <i className="fab fa-whatsapp"></i>
         </a>
-        <a id="profile-link" className="buttons contact-via" href="mailto:arianracca@gmail.com">
-          <i className="fas fa-at"></i> Send a mail
+        <a aria-label="Send a mail" id="profile-link" className="buttons contact-via" href="mailto:arianracca@gmail.com">
+          <i className="fas fa-at"></i>
         </a>
-        <a id="profile-link" className="buttons contact-via" href="https://github.com/arianracca" target="_blank">
-          <i className="fab fa-github"></i> GitHub
+        <a aria-label="Check on my Github repository" id="profile-link" className="buttons contact-via" href="https://github.com/arianracca" target="_blank">
+          <i className="fab fa-github"></i>
         </a>
-        <a id="profile-link" className="buttons contact-via" href="https://www.linkedin.com/in/arianracca/" target="_blank">
-          <i className="fab fa-linkedin"></i> Contact me
+        <a aria-label="Reach me on Linkedin" id="profile-link" className="buttons contact-via" href="https://www.linkedin.com/in/arianracca/" target="_blank">
+          <i className="fab fa-linkedin"></i>
         </a>
       </div>
     </section>
