@@ -1,14 +1,16 @@
 import './App.css';
-import Navbar from './components/Navbar';
+import CustomNavbar from './components/CustomNavbar';
 import WelcomeSection from './components/WelcomeSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <CustomNavbar />
       <WelcomeSection />
       <ProjectsSection />
       <ContactSection />
