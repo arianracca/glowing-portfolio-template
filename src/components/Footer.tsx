@@ -5,13 +5,19 @@ const Footer: React.FC = () => {
     <footer>
       <ul>
         <li>
-          <a href="#">About</a>
+          <a href="#">Home</a>
         </li>
         <li>
-          <a href="#">Work</a>
+          <a href="#about">About</a>
         </li>
         <li>
-          <a href="#">Contact</a>
+          <a href="#projects">Projects</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+        <li>
+          <a href="#TODO">Blog</a>
         </li>
       </ul>
       <span>Arian Racca 2020</span>
