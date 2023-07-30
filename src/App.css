@@ -21,6 +21,12 @@
   box-sizing: inherit;
 }
 
+/* Estilo de foco para todos los elementos en la página */
+*:focus {
+  outline: none; /* Para ocultar el enfoque predeterminado del navegador */
+  box-shadow: 0 0 5px 3px var(--color-white) !important; /* Borde difuminado en blanco */
+}
+
 html {
   box-sizing: border-box;
   color: var(--color-white) !important;
@@ -30,20 +36,19 @@ html {
 
 body {
   background-color: var(--color-dark);
-  background-image: linear-gradient(180deg, var(--color-dark) 35%, var(--color-secondary) 100%);
+  background-image: linear-gradient(180deg, var(--color-dark) 70%, var(--color-secondary) 100%);
 }
 
 h1 {
-  color: var(--color-dark) !important;
+  color: var(--color-highlight) !important;
   font-size: 5rem !important;
-  text-shadow: 5px 5px 40px var(--color-white);
+  text-shadow: 1px 1px 30px var(--color-white);
   padding: 1rem;
 }
 
 h2 {
   color: var(--color-white) !important;
   font-size: 3rem;
-  text-shadow: 1px 2px 2px var(--color-dark);
 }
 
 .subtitle {
@@ -51,7 +56,7 @@ h2 {
   font-size: 2.6rem;
   font-weight: 350;
   color: var(--color-primary);
-  text-shadow: 2px 2px 8px var(--color-dark);
+  text-shadow: 1px 1px 10px var(--color-dark);
 }
 
 a {
@@ -75,20 +80,45 @@ img {
 
 /* NAVIGATION BAR */
 .navbar {
+  display: inline-block;
   box-shadow: 0 3px 2px var(--color-dark);
   width: 100%;
   top: 0;
   left: 0;
   z-index: 10;
-  display: flex;
-  justify-content: flex-end;
   position: fixed;
   background: var(--color-primary);
-  box-shadow: 0 3px 2px var(--color-dark);
+  background-image: linear-gradient(180deg, var(--color-primary) 25%, var(--color-secondary) 150%);
+  box-shadow: 0 1px 60px var(--color-gray);
+}
+
+#navbar-logo {
+  border-radius: 50%; 
+}
+
+.navbar-brand {
+  border-radius: 50%;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+  margin: 1rem;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
+
+.navbar-collapse {
+  justify-content: flex-end !important;
+  margin-right: 1rem;
 }
 
 .nav-list {
   display: flex;
+  justify-content: flex-end !important;
   margin-right: 2rem;
 }
 
@@ -98,57 +128,89 @@ img {
   padding: 2rem;
 }
 
-.nav-list a:hover {
-  background-color: var(--color-gray);
-  transition: background-color 1s ease-out;
-}
-
-@media (max-width: 370px) {
-  .nav {
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    flex-direction: row;
-    padding: 0 50px;
-    justify-content: center;
-  }
-
-  .nav-list {
-    margin-right: 1rem;
-  }
-
-  .nav-list a {
-    display: block;
-    font-size: 1.2rem;
-    padding: 1rem;
-  }
-}
-
 /* Estilos para el botón del menú hamburguesa */
 .navbar-toggler {
-  border: none;
+  color: var(--color-white);
+  position: relative;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent !important;
+  border: none !important;
+  outline: none !important;
+  margin-right: 1rem;
 }
 
-.navbar-toggler-icon {
+/* Estilo para el focus en el menú hamburguesa */
+.navbar-toggler:focus {
+  box-shadow: 0 0 5px 3px var(--color-white) !important;
+}
+
+.navbar-toggler-line {
+  position: absolute;
+  width: 22px;
+  height: 2px;
   background-color: var(--color-white);
+  border-radius: 2px;
+  transition: transform 0.2s;
+}
+
+.navbar-toggler::before,
+.navbar-toggler::after {
+  content: '';
+  position: absolute;
+  width: 22px;
+  height: 2px;
+  border-radius: 2px;
+  background-color: var(--color-white);
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+/* Estilo inicial de las líneas del icono "hamburguesa" */
+.navbar-toggler-line {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navbar-toggler::before {
+  top: 25%;
+  transform: translateY(0px, -50%);
+}
+
+.navbar-toggler::after {
+  bottom: 25%;
+  transform: translateY(0px, 50%);
+}
+
+/* Estilo de las líneas cuando el menú está abierto */
+.navbar-toggler.active .navbar-toggler-line {
+  opacity: 0;
+}
+
+.navbar-toggler.active::before {
+  top: 50%;
+  transform: rotate(405deg) translateY(-50%);
+}
+
+.navbar-toggler.active::after {
+  bottom: 50%;
+  transform: rotate(-405deg) translateY(50%);
 }
 
 /* Estilos para el menú desplegable */
-
 .navbar-nav {
   text-align: center;
 }
 
 .nav-link {
-  font-size: 2.2rem;
-  padding: 1rem;
+  font-size: 1.5rem !important;
+  padding: 1.2rem !important;
   color: var(--color-white);
   text-decoration: none;
-  transition: background-color 1s ease-out;
-}
-
-.nav-link:hover {
-  background-color: var(--color-highlight);
+  transition: all 1s ease-in-out;
 }
 
 /* WELCOME SECTION */
@@ -163,7 +225,7 @@ img {
   justify-content: center;
   text-align: center;
   align-items: center;
-  background-image: url('.\assets\bg-eye.webp');
+  background-image: url('./assets/bg-eye.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -184,7 +246,7 @@ img {
 .projects-header {
   margin: 0 auto 6rem auto;
   max-width: 600px;
-  text-shadow: 2px 2px 2px var(--color-secondary);
+  text-shadow: 1px 1px 10px var(--color-secondary);
 }
 
 .projects-grid {
@@ -282,9 +344,8 @@ img {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
   justify-content: center;
-  margin-top: 3.8rem;
+  margin-top: 1.7rem;
 }
 
 .contact-via {
