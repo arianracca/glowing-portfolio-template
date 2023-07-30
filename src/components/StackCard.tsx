@@ -1,4 +1,4 @@
-import React from 'react';
+import getIconForTechnology from '../utils/iconHelper';
 
 interface StackCardProps {
   title: string;
@@ -8,13 +8,14 @@ interface StackCardProps {
 const StackCard: React.FC<StackCardProps> = ({ title, technologies }) => {
   return (
     <div className="stack-card">
-      <div className="card-content">
-        <h3>{title}</h3>
-        <ul>
-          {technologies.map((tech, index) => (
-            <li key={index}>{tech}</li>
-          ))}
-        </ul>
+      <h3 className="stack-title">{title}</h3>
+      <br />
+      <div className="stack-icons">
+        {technologies.map((tech, index) => (
+          <div key={index} className={`icon-${index + 1}`}>
+            {getIconForTechnology(tech)}
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
 
 :root {
   --color-dark: #0b0707;
@@ -30,25 +30,44 @@
 html {
   box-sizing: border-box;
   color: var(--color-white) !important;
-  font-family: 'Poppins', sans-serif;
-  font-size: 10px;
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 12px;
 }
 
 body {
+  font-family: 'Rajdhani', sans-serif !important;
   background-color: var(--color-dark);
-  background-image: linear-gradient(180deg, var(--color-dark) 70%, var(--color-secondary) 100%);
+  background-image: linear-gradient(180deg, var(--color-dark) 70%, var(--color-highlight) 150%);
 }
 
 h1 {
-  color: var(--color-highlight) !important;
+  font-family: 'Rajdhani', sans-serif !important;
+  color: var(--color-white) !important;
   font-size: 5rem !important;
   text-shadow: 1px 1px 30px var(--color-white);
   padding: 1rem;
 }
 
 h2 {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 3rem !important;
   color: var(--color-white) !important;
-  font-size: 3rem;
+}
+
+h3 {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 2.4rem !important;
+  color: var(--color-white) !important;
+}
+
+h4 {
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 2rem !important;
+  color: var(--color-white) !important;
+}
+
+p {
+  font-family: 'Rajdhani', sans-serif !important;
 }
 
 .subtitle {
@@ -116,7 +135,8 @@ button:hover {
 }
 
 #navbar-logo {
-  border-radius: 50%; 
+  border-radius: 50%;
+  box-shadow: 1px 1px 10px var(--color-white);
 }
 
 .navbar-brand {
@@ -255,20 +275,37 @@ button:hover {
 }
 
 .about-info h2 {
-  font-size: 24px;
   font-weight: bold;
-  font-style: italic;
 }
 
 .about-info h3 {
   color: var(--color-white);
-  font-size: 20px;
   font-weight: bold;
 }
 
 .about-info p {
-  font-size: 16px;
+  font-size: 1.5rem;
   color: var(--color-white);
+}
+
+/* Estilo para la sub-heading */
+.sub-heading {
+  margin-bottom: 1rem;
+}
+
+.sub-heading h3 {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+/* Estilo para el contenido del about */
+.about-content {
+  margin-top: 1.4rem;
+}
+
+.about-content p {
+  line-height: 1.5;
+  margin-bottom: 1rem;
 }
 
 .profile-image {
@@ -297,33 +334,46 @@ button:hover {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  column-gap: 2rem;
   margin-top: 2rem;
 }
 
 /* Styles for Stack Card */
 .stack-card {
-  padding: 20px;
   background: var(--color-primary);
   background-image: linear-gradient(180deg, var(--color-primary) 25%, var(--color-secondary) 130%);
   box-shadow: 0 1px 60px var(--color-gray);
   border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
-.stack-card h2 {
+.stack-title {
   font-size: 24px;
   font-weight: bold;
   color: var(--color-white);
 }
 
-.stack-card ul {
-  margin-top: 10px;
-  list-style-type: none;
+.stack-icons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  gap: 10px;
 }
 
-.stack-card li {
-  font-size: 16px;
-  color: var(--color-white);
+.stack-icons > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: var(--color-white);
+  border-radius: 10px;
+}
+
+.stack-icons svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--color-primary);
 }
 
 /* WELCOME SECTION */

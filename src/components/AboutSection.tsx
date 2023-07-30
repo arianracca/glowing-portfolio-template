@@ -1,15 +1,56 @@
-import StackCard from './StackCard'; // Importa el componente StackCard si no lo has hecho ya
+import StackCard from './StackCard';
 
 const AboutSection = () => {
   const stackCardsData = [
     {
-      title: 'Stack Card 1',
-      technologies: ['Technology 1', 'Technology 2', 'Technology 3'],
+      title: 'Frontend',
+      technologies: 
+      [
+        'html5',
+        'css3',
+        'javascript',
+        'typescript',
+        'react',
+        'angular',
+        'wordpress',
+        'bootstrap',
+        'material ui'
+      ],
     },
     {
-      title: 'Stack Card 2',
-      technologies: ['Technology 4', 'Technology 5', 'Technology 6'],
+      title: 'Backend',
+      technologies:
+      [
+        'java',
+        'springboot',
+        'spring',
+        'junit',
+        'python',
+        'mysql',
+        'database'
+      ],
     },
+    {
+      title: 'Tools',
+      technologies:
+      [
+        'git',
+        'bitbucket',
+        'jenkins',
+        'postman',
+        'swagger',
+        'jira',
+        'kibana'
+      ],
+    },
+    {
+      title: 'Game Dev',
+      technologies:
+      [
+        'godot',
+        'unity'
+      ],
+    }
     // Add more stack cards data as needed
   ];
 
@@ -39,28 +80,26 @@ const AboutSection = () => {
             {/* Contenido de la columna lateral a la izquierda */}
             <div className="about-info">
               <h2>Hello! I'm Arian</h2>
-              <br />
-              <div>
-                <h3>Full Stack Developer with expertise in ⚛ React and Java Spring Boot 🍃</h3>
-                <br />
+              <div className="sub-heading">
+                <h3>Full Stack Developer</h3>
+                <h4>React and Java Spring Boot</h4>
+              </div>
+              <div className="about-content">
                 <p>
                   Currently, I'm pursuing a Technical Degree in Artificial Intelligence 🤖 to
                   satisfy my curiosity for cutting-edge technologies.
                 </p>
-                <br />
                 <p>
                   🔧 My toolkit includes Angular, TypeScript, Python, Git, and MySQL, enabling me
                   to take on a wide range of exciting challenges in web development. Whether
                   building responsive frontends or robust backends, I'm ready for the task!
                 </p>
-                <br />
                 <p>
                   👥 As a proactive and responsible team player, I thrive in collaborative
                   environments. Effective communication and kindness form the foundation of my
                   approach, ensuring seamless collaboration with my peers and delivering remarkable
                   results.
                 </p>
-                <br />
                 <p>
                   🗣️ Moreover, my background as a Psychologist plays a pivotal role in my
                   interactions with fellow team members. My lateral thinking abilities, listening
@@ -68,14 +107,12 @@ const AboutSection = () => {
                   qualities that allow me to effectively collaborate within the team and find
                   creative and empathetic solutions.
                 </p>
-                <br />
                 <p>
                   💡 My passion for learning drives me to stay at the forefront, constantly
                   updating my skills to keep up with the latest industry trends. I believe that
                   staying abreast of emerging technologies allows my work to reach the highest
                   quality and provide innovative solutions.
                 </p>
-                <br />
                 <p>Feel free to reach out to me for collaboration opportunities.</p>
                 <p>🤝 Together, we will create exceptional experiences.</p>
               </div>
