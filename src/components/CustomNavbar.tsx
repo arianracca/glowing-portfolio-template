@@ -33,10 +33,11 @@ const CustomNavbar = () => {
       </div>
       <Navbar.Collapse id="navbar-nav" className={`${isMenuOpen ? 'show' : ''}`}>
         <Nav className="ml-auto">
-          <Nav.Link href="#welcome-section">About</Nav.Link>
-          <Nav.Link href="#projects">Work</Nav.Link>
+          <Nav.Link href="#">Home</Nav.Link>
+          <Nav.Link href="#about">About</Nav.Link>
+          <Nav.Link href="#projects">Projects</Nav.Link>
           <Nav.Link href="#contact">Contact</Nav.Link>
-          <Nav.Link href="PENDIENTE">Blog</Nav.Link>
+          <Nav.Link href="TODO">Blog</Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

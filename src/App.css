@@ -373,11 +373,13 @@ img {
 /* FOOTER SECTION */
 footer {
   margin-top: 30px;
-  background-color: var(--transparent);
   padding: 20px;
   align-items: center;
   text-align: center;
   flex-direction: column;
+  background: var(--color-primary);
+  background-image: linear-gradient(0deg, var(--color-primary) 35%, var(--color-secondary) 150%);
+  box-shadow: 0 1px 60px var(--color-gray);
 }
 
 footer>ul {
@@ -402,5 +404,5 @@ footer>span {
   display: flex;
   justify-content: center;
   font-size: 1.1em;
-  color: var(--color-dark);
+  color: var(--color-white);
 }
