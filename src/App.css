@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
 
 :root {
   --color-dark: #0b0707;
@@ -30,16 +30,18 @@
 html {
   box-sizing: border-box;
   color: var(--color-white) !important;
-  font-family: 'Poppins', sans-serif;
-  font-size: 10px;
+  font-family: 'Rajdhani', sans-serif !important;
+  font-size: 12px;
 }
 
 body {
+  font-family: 'Rajdhani', sans-serif !important;
   background-color: var(--color-dark);
   background-image: linear-gradient(180deg, var(--color-dark) 70%, var(--color-highlight) 150%);
 }
 
 h1 {
+  font-family: 'Rajdhani', sans-serif !important;
   color: var(--color-white) !important;
   font-size: 5rem !important;
   text-shadow: 1px 1px 30px var(--color-white);
@@ -47,18 +49,25 @@ h1 {
 }
 
 h2 {
+  font-family: 'Rajdhani', sans-serif !important;
   font-size: 3rem !important;
   color: var(--color-white) !important;
 }
 
 h3 {
+  font-family: 'Rajdhani', sans-serif !important;
   font-size: 2.4rem !important;
   color: var(--color-white) !important;
 }
 
 h4 {
+  font-family: 'Rajdhani', sans-serif !important;
   font-size: 2rem !important;
   color: var(--color-white) !important;
+}
+
+p {
+  font-family: 'Rajdhani', sans-serif !important;
 }
 
 .subtitle {

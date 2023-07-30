@@ -17,7 +17,8 @@ import {
     FaBitbucket,
     FaTerminal,
     FaSlack,
-    FaFontAwesome
+    FaFontAwesome,
+    FaPhp
 } from 'react-icons/fa';
 import {
     SiPostman,
@@ -41,7 +42,7 @@ import {
     SiSqlite
 } from 'react-icons/si';
 import IconMaterialUi from './icons/IconMaterialUi';
-import IconBrandDjango from './icons/IconBrandDjango';
+import IconDjango from './icons/IconDjango';
 import IconGodotengine from './icons/IconGodotengine';
 
 
@@ -70,7 +71,7 @@ const getIconForTechnology = (technology: string) => {
         case 'python':
             return <FaPython />;
         case 'django':
-            return <IconBrandDjango />;
+            return <IconDjango />;
         case 'css3':
             return <FaCss3Alt />;
         case 'bootstrap':
@@ -87,6 +88,8 @@ const getIconForTechnology = (technology: string) => {
             return <FaDatabase />;
         case 'unity':
             return <FaUnity />;
+        case 'php':
+            return <FaPhp />;
         case 'godot':
             return <IconGodotengine />;
         case 'font awesome':

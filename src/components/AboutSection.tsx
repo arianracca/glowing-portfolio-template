@@ -22,8 +22,9 @@ const AboutSection = () => {
       technologies:
       [
         'java',
-        'spring',
         'springboot',
+        'spring',
+        'junit',
         'python',
         'mysql',
         'database'
@@ -36,11 +37,20 @@ const AboutSection = () => {
         'git',
         'bitbucket',
         'jenkins',
-        'jira',
         'postman',
-        'swagger'
+        'swagger',
+        'jira',
+        'kibana'
       ],
     },
+    {
+      title: 'Game Dev',
+      technologies:
+      [
+        'godot',
+        'unity'
+      ],
+    }
     // Add more stack cards data as needed
   ];
 
