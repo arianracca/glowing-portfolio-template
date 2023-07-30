@@ -1,5 +1,6 @@
 import './App.css';
 import CustomNavbar from './components/CustomNavbar';
+import AboutSection from './components/AboutSection'
 import WelcomeSection from './components/WelcomeSection';
 import ProjectsSection from './components/ProjectsSection';
 import ContactSection from './components/ContactSection';
@@ -12,6 +13,7 @@ function App() {
     <div className="App">
       <CustomNavbar />
       <WelcomeSection />
+      <AboutSection />
       <ProjectsSection />
       <ContactSection />
       <Footer />
