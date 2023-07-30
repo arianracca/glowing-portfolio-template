@@ -21,6 +21,12 @@
   box-sizing: inherit;
 }
 
+/* Estilo de foco para todos los elementos en la página */
+*:focus {
+  outline: none; /* Para ocultar el enfoque predeterminado del navegador */
+  box-shadow: 0 0 5px 3px var(--color-white) !important; /* Borde difuminado en blanco */
+}
+
 html {
   box-sizing: border-box;
   color: var(--color-white) !important;
@@ -118,6 +124,7 @@ img {
 
 /* Estilos para el botón del menú hamburguesa */
 .navbar-toggler {
+  color: var(--color-white);
   position: relative;
   width: 30px;
   height: 25px;
@@ -125,10 +132,15 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: transparent !important;
   border: none !important;
-  outline: none;
+  outline: none !important;
   margin-right: 1rem;
+}
+
+/* Estilo para el focus en el menú hamburguesa */
+.navbar-toggler:focus {
+  box-shadow: 0 0 5px 3px var(--color-white) !important;
 }
 
 .navbar-toggler-line {
