@@ -251,6 +251,9 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: sticky;
+  top: 80px; /* Ajusta la posición de acuerdo al padding superior de .about-section */
+  margin-top: 20px; /* Ajusta el margen para separar del título "About me" */
 }
 
 .profile-image img {
@@ -259,6 +262,7 @@ img {
   border-radius: 50%;
   box-shadow: 0 1px 60px var(--color-gray);
 }
+
 
 
 /* WELCOME SECTION */
