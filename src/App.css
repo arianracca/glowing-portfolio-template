@@ -325,13 +325,11 @@ button:hover {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 20px;
+  column-gap: 2rem;
   margin-top: 2rem;
 }
 
 /* Styles for Stack Card */
-/* styles.css o StackCard.css */
-
 .stack-card {
   background: var(--color-primary);
   background-image: linear-gradient(180deg, var(--color-primary) 25%, var(--color-secondary) 130%);

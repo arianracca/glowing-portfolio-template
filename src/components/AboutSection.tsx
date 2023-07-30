@@ -1,4 +1,4 @@
-import StackCard from './StackCard'; // Importa el componente StackCard si no lo has hecho ya
+import StackCard from './StackCard';
 
 const AboutSection = () => {
   const stackCardsData = [
@@ -8,13 +8,13 @@ const AboutSection = () => {
       [
         'html5',
         'css3',
-        'Javascript',
+        'javascript',
         'typescript',
         'react',
         'angular',
         'wordpress',
-        'Bootstrap',
-        'Material UI'
+        'bootstrap',
+        'material ui'
       ],
     },
     {
@@ -25,10 +25,20 @@ const AboutSection = () => {
         'spring',
         'springboot',
         'python',
-        'postman',
-        'swagger',
         'mysql',
         'database'
+      ],
+    },
+    {
+      title: 'Tools',
+      technologies:
+      [
+        'git',
+        'bitbucket',
+        'jenkins',
+        'jira',
+        'postman',
+        'swagger'
       ],
     },
     // Add more stack cards data as needed

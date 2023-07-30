@@ -33,9 +33,16 @@ import {
     SiTypescript,
     SiJavascript,
     SiSpringboot,
-    SiSpring
+    SiSpring,
+    SiJest,
+    SiJunit5,
+    SiMysql,
+    SiPostgresql,
+    SiSqlite
 } from 'react-icons/si';
-import IconMaterialUi from './IconMaterialUi';
+import IconMaterialUi from './icons/IconMaterialUi';
+import IconBrandDjango from './icons/IconBrandDjango';
+import IconGodotengine from './icons/IconGodotengine';
 
 
 const getIconForTechnology = (technology: string) => {
@@ -44,6 +51,8 @@ const getIconForTechnology = (technology: string) => {
             return <FaHtml5 />;
         case 'react':
             return <FaReact />;
+        case 'jest':
+            return <SiJest />;
         case 'angular':
             return <FaAngular />;
         case 'node.js':
@@ -52,12 +61,16 @@ const getIconForTechnology = (technology: string) => {
             return <FaTerminal />;
         case 'java':
             return <FaJava />;
+        case 'junit':
+            return <SiJunit5 />;
         case 'springboot':
             return <SiSpringboot />;
         case 'spring':
             return <SiSpring />;
         case 'python':
             return <FaPython />;
+        case 'django':
+            return <IconBrandDjango />;
         case 'css3':
             return <FaCss3Alt />;
         case 'bootstrap':
@@ -74,6 +87,8 @@ const getIconForTechnology = (technology: string) => {
             return <FaDatabase />;
         case 'unity':
             return <FaUnity />;
+        case 'godot':
+            return <IconGodotengine />;
         case 'font awesome':
             return <FaFontAwesome />;
         case 'postman':
@@ -108,6 +123,12 @@ const getIconForTechnology = (technology: string) => {
             return <FaBitbucket />
         case 'bitbucket':
             return <FaSlack />
+        case 'mysql':
+            return <SiMysql />
+        case 'postgresql':
+            return <SiPostgresql />
+        case 'sqlite':
+            return <SiSqlite />
         default:
             return null;
     }
