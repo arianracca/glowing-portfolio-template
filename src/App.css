@@ -23,7 +23,7 @@
 
 /* Estilo de foco para todos los elementos en la página */
 *:focus {
-  outline: none; /* Para ocultar el enfoque predeterminado del navegador */
+  outline: none !important; /* Para ocultar el enfoque predeterminado del navegador */
   box-shadow: 0 0 5px 3px var(--color-white) !important; /* Borde difuminado en blanco */
 }
 
@@ -78,10 +78,33 @@ img {
   width: 100%;
 }
 
+button {
+  padding: 10px 20px !important;
+  border: none !important;
+  color: var(--color-white);
+  background: var(--color-primary);
+  background-image: linear-gradient(180deg, var(--color-primary) 50%, var(--color-secondary) 200%);
+  box-shadow: 1px 1px 60px var(--color-gray);
+  font-size: 1.5rem !important;
+  border-radius: 10px !important;
+  transition: all 0.8s ease-in-out !important;
+
+  @media (max-width: 992px){
+    margin: 1.5rem;
+  }
+}
+
+button:hover {
+  background: var(--color-secondary);
+  background-image: linear-gradient(180deg, var(--color-secondary) 10%, var(--color-primary) 100%);
+  box-shadow: 2px 2px 80px var(--color-secondary);
+  color: var(--color-dark);        
+}
+
+
 /* NAVIGATION BAR */
 .navbar {
   display: inline-block;
-  box-shadow: 0 3px 2px var(--color-dark);
   width: 100%;
   top: 0;
   left: 0;
@@ -89,7 +112,7 @@ img {
   position: fixed;
   background: var(--color-primary);
   background-image: linear-gradient(180deg, var(--color-primary) 25%, var(--color-secondary) 150%);
-  box-shadow: 0 1px 60px var(--color-gray);
+  box-shadow: 1px 1px 60px var(--color-gray);
 }
 
 #navbar-logo {
@@ -133,7 +156,7 @@ img {
   color: var(--color-white);
   position: relative;
   width: 30px;
-  height: 25px;
+  height: 35px;
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -143,6 +166,7 @@ img {
   outline: none !important;
   margin-right: 1rem;
 }
+
 
 /* Estilo para el focus en el menú hamburguesa */
 .navbar-toggler:focus {
@@ -233,13 +257,13 @@ img {
 .about-info h2 {
   font-size: 24px;
   font-weight: bold;
+  font-style: italic;
 }
 
 .about-info h3 {
   color: var(--color-white);
   font-size: 20px;
   font-weight: bold;
-  font-style: italic;
 }
 
 .about-info p {
@@ -249,21 +273,24 @@ img {
 
 .profile-image {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: sticky;
-  top: 80px; /* Ajusta la posición de acuerdo al padding superior de .about-section */
-  margin-top: 20px; /* Ajusta el margen para separar del título "About me" */
+  top: 1rem;
+
+  @media (max-width: 992px) {
+    margin-bottom: 1.5rem;
+    margin-top: 1rem;
+  }
 }
 
 .profile-image img {
-  width: 200px;
-  height: 200px;
+  max-width: 250px;
   border-radius: 50%;
-  box-shadow: 0 1px 60px var(--color-gray);
+  box-shadow: 1px 1px 60px var(--color-gray);
+  margin-bottom: 1.5rem;
 }
-
-
 
 /* WELCOME SECTION */
 .welcome-section {
@@ -312,7 +339,7 @@ img {
 }
 
 .project {
-  box-shadow: 1px 1px 2px var(--color-dark);
+  box-shadow: 1px 1px 60px var(--color-gray);
   border-radius: 2px;
   background: var(--color-primary);
 }
@@ -385,7 +412,7 @@ img {
   align-items: center;
   text-align: center;
   flex-direction: column;
-  box-shadow: 1px 1px 2px var(--color-dark);
+  box-shadow: 1px 1px 60px var(--color-gray);
 }
 
 .contact-section>.subtitle {
@@ -431,7 +458,7 @@ footer {
   flex-direction: column;
   background: var(--color-primary);
   background-image: linear-gradient(0deg, var(--color-primary) 35%, var(--color-secondary) 150%);
-  box-shadow: 0 1px 60px var(--color-gray);
+  box-shadow: 1px 1px 60px var(--color-gray);
 }
 
 footer>ul {

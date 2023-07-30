@@ -1,21 +1,33 @@
 const AboutSection = () => {
+
+  const handleDownloadCV = () => {
+    // URL del enlace de Google Drive
+    const cvLink = 'https://drive.google.com/file/d/1u62YhHn7AjGtYWBbCt5TK7FhOzZXSSJw/view?usp=drive_link';
+    
+    // Abrir el enlace en una nueva pestaña
+    window.open(cvLink, '_blank');
+  };
+
   return (
     <div className="about-section">
       <div className="container">
         <div className="row">
-          <div className="col-lg-4 mb-5">
+          <div className="col-lg-4">
             {/* Imagen de perfil redonda */}
             <div className="profile-image">
               <img src="src/assets/my-photo.webp" alt="My Photo" />
+              <button className="download-btn" onClick={handleDownloadCV}>
+                Download my Resume
+              </button>
             </div>
           </div>
           <div className="col-lg-8 align">
             {/* Contenido de la columna lateral a la izquierda */}
             <div className="about-info">
-              <h2>About me</h2>
+              <h2>Hello! I'm Arian</h2>
               <br />
               <div>
-                <h3>Hello! I'm Arian, a passionate Full Stack Developer with expertise in ⚛ React and Java Spring Boot 🍃</h3>
+                <h3>Full Stack Developer with expertise in ⚛ React and Java Spring Boot 🍃</h3>
                 <br />
                 <p>Currently, I'm pursuing a Technical Degree in Artificial Intelligence 🤖 to satisfy my curiosity for cutting-edge technologies.</p>
                 <br />
