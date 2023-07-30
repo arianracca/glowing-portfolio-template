@@ -147,7 +147,7 @@ img {
   width: 22px;
   height: 2px;
   border-radius: 2px;
-  background-color: var(--color-white); /* Color blanco */
+  background-color: var(--color-white);
   transition: transform 0.2s, opacity 0.2s;
 }
 
@@ -159,12 +159,12 @@ img {
 
 .navbar-toggler::before {
   top: 25%;
-  transform: translateY(-50%);
+  transform: translateY(0px, -50%);
 }
 
 .navbar-toggler::after {
   bottom: 25%;
-  transform: translateY(50%);
+  transform: translateY(0px, 50%);
 }
 
 /* Estilo de las líneas cuando el menú está abierto */
@@ -173,11 +173,13 @@ img {
 }
 
 .navbar-toggler.active::before {
-  transform: rotate(45deg);
+  top: 50%;
+  transform: rotate(405deg) translateY(-50%);
 }
 
 .navbar-toggler.active::after {
-  transform: rotate(-45deg);
+  bottom: 50%;
+  transform: rotate(-405deg) translateY(50%);
 }
 
 /* Estilos para el menú desplegable */
@@ -192,7 +194,6 @@ img {
   text-decoration: none;
   transition: all 1s ease-in-out;
 }
-
 
 /* WELCOME SECTION */
 .welcome-section {
