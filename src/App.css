@@ -82,6 +82,7 @@ img {
   z-index: 10;
   position: fixed;
   background: var(--color-primary);
+  background-image: linear-gradient(180deg, var(--color-primary) 25%, var(--color-secondary) 150%);
   box-shadow: 0 1px 60px var(--color-gray);
   padding: 1rem;
 }
@@ -93,13 +94,14 @@ img {
 .flex-space-between {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Alinea verticalmente los elementos */
-  width: 100%; /* Ocupa todo el ancho disponible */
-  padding: 1rem; /* Agrega un espacio entre los elementos y los bordes del navbar */
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
 }
 
 .navbar-collapse {
   justify-content: flex-end !important;
+  margin-right: 1rem;
 }
 
 .nav-list {
@@ -118,7 +120,13 @@ img {
 .navbar-toggler {
   margin: 1rem;
   color: var(--color-white) !important;
+  border-color: var(--color-white) !important;
+  
   font-size: 1.7rem !important;
+}
+
+.navbar-toggler-icon {
+  color: var(--color-white) !important;
 }
 
 /* Estilos para el menú desplegable */
@@ -131,7 +139,7 @@ img {
   padding: 1.2rem !important;
   color: var(--color-white);
   text-decoration: none;
-  transition: background-color 1s ease-out;
+  transition: all 1s ease-in-out;
 }
 
 /* WELCOME SECTION */
