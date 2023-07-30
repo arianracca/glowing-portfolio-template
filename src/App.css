@@ -74,7 +74,7 @@ img {
 
 /* NAVIGATION BAR */
 .navbar {
-  justify-content: flex-end !important;
+  display: inline-block;
   box-shadow: 0 3px 2px var(--color-dark);
   width: 100%;
   top: 0;
@@ -83,14 +83,19 @@ img {
   position: fixed;
   background: var(--color-primary);
   box-shadow: 0 1px 60px var(--color-gray);
+  padding: 1rem;
 }
 
 .navbar-brand {
-  margin-left: 1rem;
+  margin: 1rem;
 }
 
-.navbar .navbar-brand.align-items-start {
-  align-items: flex-start !important;
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Alinea verticalmente los elementos */
+  width: 100%; /* Ocupa todo el ancho disponible */
+  padding: 1rem; /* Agrega un espacio entre los elementos y los bordes del navbar */
 }
 
 .navbar-collapse {
@@ -111,18 +116,12 @@ img {
 
 /* Estilos para el botón del menú hamburguesa */
 .navbar-toggler {
+  margin: 1rem;
   color: var(--color-white) !important;
   font-size: 1.7rem !important;
-  margin: 1rem;
-}
-
-.navbar-toggler-icon {
-  color: var(--color-white) !important;
-  /* background-color: var(--color-white); */
 }
 
 /* Estilos para el menú desplegable */
-
 .navbar-nav {
   text-align: center;
 }

@@ -3,7 +3,17 @@ import logo from '../assets/logo.png';
 
 const CustomNavbar = () => {
   return (
-    <Navbar expand="md" className="navbar">
+    <Navbar expand="md" className="navbar flex-space-between">
+
+      <Navbar.Brand href="/" className="align-items-start">
+        <img
+          src={logo}
+          id="navbar-logo"
+          alt="Logo"
+          height="40"
+          className="d-inline-block align-top ml-3"
+        />
+      </Navbar.Brand>
       <Navbar.Toggle aria-controls="navbar-nav" />
       <Navbar.Collapse id="navbar-nav">
         <Nav className="ml-auto">
@@ -13,15 +23,7 @@ const CustomNavbar = () => {
           <Nav.Link href="PENDIENTE">Blog</Nav.Link>
         </Nav>
       </Navbar.Collapse>
-      <Navbar.Brand href="/" className="align-items-start">
-        <img
-          src={logo}
-          id="navbar-log"
-          alt="Logo"
-          height="40"
-          className="d-inline-block align-top ml-3"
-        />
-      </Navbar.Brand>
+
     </Navbar>
   );
 };
