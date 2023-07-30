@@ -90,10 +90,16 @@ img {
   background: var(--color-primary);
   background-image: linear-gradient(180deg, var(--color-primary) 25%, var(--color-secondary) 150%);
   box-shadow: 0 1px 60px var(--color-gray);
-  padding: 1rem;
+}
+
+#navbar-logo {
+  border-radius: 50%; 
 }
 
 .navbar-brand {
+  border-radius: 50%;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
   margin: 1rem;
 }
 
