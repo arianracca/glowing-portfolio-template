@@ -55,7 +55,7 @@
     justify-content: center;
     align-items: center;
     position: sticky;
-    top: 11rem;
+    top: 1.5rem;
   
     @media (max-width: 992px) {
       margin-bottom: 1.5rem;
