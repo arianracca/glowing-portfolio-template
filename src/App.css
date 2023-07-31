@@ -414,10 +414,6 @@ button:hover {
   font-size: 1.2rem;
 }
 
-.align-right {
-  align-items: flex-end;
-}
-
 /* Estilos para los botones de redes sociales */
 .social-links {
   display: flex;
