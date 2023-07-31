@@ -121,7 +121,7 @@ button:hover {
 }
 
 
-/* NAVIGATION BAR */
+/* NAVIGATION BAR : TODO Refactor para llevar a customNavbar.module.css */
 .navbar {
   display: inline-block;
   width: 100%;
