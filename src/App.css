@@ -120,7 +120,7 @@ button:hover {
   color: var(--color-dark);        
 }
 
-
+/* --------------------------------------------------------------------- */
 /* NAVIGATION BAR : TODO Refactor para llevar a customNavbar.module.css */
 .navbar {
   display: inline-block;
@@ -213,7 +213,7 @@ button:hover {
   transition: transform 0.2s, opacity 0.2s;
 }
 
-/* Estilo inicial de las líneas del icono "hamburguesa" */
+/* Estilo inicial de las líneas del icono hamburguesa */
 .navbar-toggler-line {
   top: 50%;
   transform: translateY(-50%);
@@ -258,77 +258,7 @@ button:hover {
 }
 
 
-
-/* WELCOME SECTION */
-.welcome-section {
-  text-shadow: 2px 2px 20px var(--color-gray);
-  width: 100%;
-  height: 100vh;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  background-image: url('./assets/bg-eye.webp');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-@media (max-width: 370px) {
-  .welcome-section>h1 {
-    font-size: 3.5rem;
-  }
-}
-
-.welcome-text {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  text-shadow: 2px 2px 30px var(--color-dark);
-}
-
-.welcome-subtitle {
-  color: var(--color-highlight) !important;
-  text-shadow: 1px 1px 10px var(--color-white) !important;
-  font-size: 1.2rem;
-}
-
-/* Estilos para los botones de redes sociales */
-.social-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.social-link {
-  padding: 10px 20px;
-  background-color: var(--transparent);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  margin: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: background-color 0.2s ease-in-out;
-}
-
-.social-link-btn {
-  border-radius: 30% !important;
-  padding: 5px 10px !important;
-  margin: 0.12rem;
-}
-
-.social-link:hover {
-  background-color: var(--color-secondary);
-}
-
-
+/* --------------------------------------------------------------------- */
 /* PROJECTS SECTION */
 .projects-section {
   text-align: center;
@@ -462,6 +392,7 @@ button:hover {
   }
 }
 
+/* ---------------------------------------------- */
 /* FOOTER SECTION */
 footer {
   margin-top: 30px;
