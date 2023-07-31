@@ -1,4 +1,4 @@
-import SocialLinkComponent from './SocialLinkComponent';
+import SocialLinkComponent from '../common/SocialLinkComponent';
 
 const WelcomeSection: React.FC = () => {
   return (

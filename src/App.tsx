@@ -1,10 +1,10 @@
 import './App.css';
-import CustomNavbar from './components/CustomNavbar';
-import AboutSection from './components/AboutSection'
-import WelcomeSection from './components/WelcomeSection';
-import ProjectsSection from './components/ProjectsSection';
-import ContactSection from './components/ContactSection';
-import Footer from './components/Footer';
+import CustomNavbar from './components/navbar/CustomNavbar';
+import AboutSection from './components/about/AboutSection'
+import WelcomeSection from './components/welcome/WelcomeSection';
+import ProjectsSection from './components/project/ProjectsSection';
+import ContactSection from './components/contact/ContactSection';
+import Footer from './components/footer/Footer';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
