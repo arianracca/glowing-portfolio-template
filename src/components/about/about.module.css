@@ -1,0 +1,118 @@
+/* ABOUT SECTION */
+.about-section {
+    padding: 80px 0;
+  }
+  
+  .container-width {
+    max-width: 90%;
+  }
+  
+  .about-info {
+    padding: 20px;
+    background: var(--color-primary);
+    background-image: linear-gradient(180deg, var(--color-primary) 25%, var(--color-secondary) 130%);
+    box-shadow: 0 1px 60px var(--color-gray);
+    border-radius: 10px;
+  }
+  
+  .about-info h2 {
+    font-weight: bold;
+  }
+  
+  .about-info h3 {
+    color: var(--color-white);
+    font-weight: bold;
+  }
+  
+  .about-info p {
+    font-size: 1.5rem;
+    color: var(--color-white);
+  }
+  
+  /* Estilo para la sub-heading */
+  .sub-heading {
+    margin-bottom: 1rem;
+  }
+  
+  .sub-heading h3 {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Estilo para el contenido del about */
+  .about-content {
+    margin-top: 1.4rem;
+  }
+  
+  .about-content p {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 1rem;
+  
+    @media (max-width: 992px) {
+      margin-bottom: 1.5rem;
+      margin-top: 1rem;
+    }
+  }
+  
+  .profile-image img {
+    max-width: 250px;
+    border-radius: 50%;
+    box-shadow: 1px 1px 60px var(--color-gray);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* STYLES FOR STACK CARD */
+  /* Styles for Grid of Stack Cards */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    column-gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  /* Styles for Stack Card */
+  .stack-card {
+    background: var(--color-primary);
+    background-image: linear-gradient(180deg, var(--color-primary) 25%, var(--color-secondary) 130%);
+    box-shadow: 0 1px 60px var(--color-gray);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .stack-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--color-white);
+  }
+  
+  .stack-icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 10px;
+  }
+  
+  .stack-icons > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    background-color: var(--color-white);
+    border-radius: 10px;
+  }
+  
+  .stack-icons svg {
+    width: 30px;
+    height: 30px;
+    fill: var(--color-primary);
+  }
