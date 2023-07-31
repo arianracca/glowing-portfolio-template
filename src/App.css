@@ -42,9 +42,9 @@ body {
 
 h1 {
   font-family: 'Rajdhani', sans-serif !important;
-  color: var(--color-white) !important;
+  color: var(--color-dark) !important;
   font-size: 5rem !important;
-  text-shadow: 1px 1px 30px var(--color-white);
+  text-shadow: 1px 1px 15px var(--color-white);
   padding: 1rem;
 }
 
@@ -378,6 +378,7 @@ button:hover {
 
 /* WELCOME SECTION */
 .welcome-section {
+  text-shadow: 2px 2px 20px var(--color-gray);
   width: 100%;
   height: 100vh;
   left: 0;
@@ -396,23 +397,23 @@ button:hover {
 
 @media (max-width: 370px) {
   .welcome-section>h1 {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
+}
+
+.welcome-section>h2 {
+  text-shadow: 1px 1px 10px var(--color-dark) !important;
 }
 
 .welcome-text {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Agregamos la sombra */
-  background-color: var(--color-primary);
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 20px;
+  padding: 1rem;
+  text-shadow: 2px 2px 30px var(--color-dark);
 }
 
 .welcome-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 /* Estilos para los botones de redes sociales */

@@ -1,4 +1,4 @@
-import getIconForTechnology from '../utils/iconHelper';
+import getIconForTechnology from '../utils/getIconForTechnology';
 
 interface StackCardProps {
   title: string;
