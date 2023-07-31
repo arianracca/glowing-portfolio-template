@@ -10,6 +10,7 @@ const AboutSection = () => {
         'css3',
         'javascript',
         'typescript',
+        'jest',
         'react',
         'angular',
         'wordpress',
@@ -27,7 +28,8 @@ const AboutSection = () => {
         'junit',
         'python',
         'mysql',
-        'database'
+        'database',
+        'php'
       ],
     },
     {

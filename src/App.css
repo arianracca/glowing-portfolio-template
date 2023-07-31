@@ -401,10 +401,6 @@ button:hover {
   }
 }
 
-.welcome-section>h2 {
-  text-shadow: 1px 1px 10px var(--color-dark) !important;
-}
-
 .welcome-text {
   display: flex;
   flex-direction: column;
@@ -413,7 +409,13 @@ button:hover {
 }
 
 .welcome-subtitle {
+  color: var(--color-highlight) !important;
+  text-shadow: 1px 1px 10px var(--color-white) !important;
   font-size: 1.2rem;
+}
+
+.align-right {
+  align-items: flex-end;
 }
 
 /* Estilos para los botones de redes sociales */
