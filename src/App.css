@@ -400,6 +400,53 @@ button:hover {
   }
 }
 
+.welcome-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Agregamos la sombra */
+  background-color: var(--color-primary);
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.welcome-subtitle {
+  font-size: 1.5rem;
+}
+
+/* Estilos para los botones de redes sociales */
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-link {
+  padding: 10px 20px;
+  background-color: var(--transparent);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.social-link-btn {
+  border-radius: 30% !important;
+  padding: 5px 10px !important;
+  margin: 0.12rem;
+}
+
+.social-link:hover {
+  background-color: var(--color-secondary);
+}
+
+
 /* PROJECTS SECTION */
 .projects-section {
   text-align: center;
