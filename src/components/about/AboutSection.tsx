@@ -1,6 +1,6 @@
 import StackCard from './StackCard';
 import styles from './about.module.css';
-import cn from 'classnames';
+
 
 const AboutSection = () => {
   const stackCardsData = [

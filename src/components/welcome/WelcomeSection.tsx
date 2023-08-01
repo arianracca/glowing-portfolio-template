@@ -1,14 +1,15 @@
 import SocialLinkComponent from '../common/SocialLinkComponent';
+import styles from './welcome.module.css';
 
 const WelcomeSection: React.FC = () => {
   return (
-    <section id="welcome-section" className="welcome-section">
-      <div className="welcome-text">
-        <h2 className="welcome-subtitle">Hello, my name is</h2>
+    <section id="welcome-section" className={styles["welcome-section"]}>
+      <div className={styles["welcome-text"]}>
+        <h2 className={styles["welcome-subtitle"]}>Hello, my name is</h2>
         <h1>Arian Racca</h1>
-        <h2 className="welcome-subtitle">This is my Profile</h2>
+        <h2 className={styles["welcome-subtitle"]}>This is my Profile</h2>
       </div>
-      <div className="social-links">
+      <div className={styles["social-links"]}>
         <div aria-label="LinkedIn">
           <SocialLinkComponent socialMedia="LinkedIn" link="https://www.linkedin.com/in/arianracca" />
         </div>

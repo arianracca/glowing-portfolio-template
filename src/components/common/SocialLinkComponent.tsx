@@ -1,5 +1,6 @@
 import React from 'react';
 import getIconForSocialMedia from '../../utils/getIconForSocialMedia';
+import styles from './socialLink.module.css';
 
 type SocialLinkProps = {
   socialMedia: string;
@@ -11,7 +12,7 @@ const SocialLinkComponent: React.FC<SocialLinkProps> = ({ socialMedia, link }) =
 
   return (
     <a href={link} target="_blank" rel="noopener noreferrer" aria-label={socialMedia}>
-      <button className="social-link-btn">
+      <button className={styles["social-link-btn"]}>
         {Icon && <Icon />}
       </button>
     </a>
