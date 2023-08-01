@@ -5,8 +5,10 @@ import styles from './projects.module.css';
 const ProjectsSection: React.FC = () => {
   // Array de proyectos con sus detalles
   const projects = [
-    { title: 'Project 1', images: ['../../assets/bg-eye.webp', '../../assets/bg-eye.webp'], link: 'URL del proyecto 1 completo', repository: 'Url repo', description: 'description' },
-    { title: 'Project 2', images: ['URL de la imagen del proyecto 2'], link: 'URL del proyecto 2 completo', repository: 'Url repo', description: 'description'  },
+    { title: 'Project 1', images: ['src/assets/bg-eye.webp', 'src/assets/logo.png'], link: 'URL del proyecto 1 completo', repository: 'Url repo', description: 'description' },
+    { title: 'Project 2', images: ['src/assets/bg-eye.webp', 'src/assets/logo.png'], link: 'URL del proyecto 2 completo', repository: 'Url repo', description: 'description'  },
+    { title: 'Project 3', images: ['src/assets/bg-eye.webp', 'src/assets/logo.png'], link: 'URL del proyecto 2 completo', repository: 'Url repo', description: 'description'  },
+    { title: 'Project 4', images: ['src/assets/bg-eye.webp', 'src/assets/logo.png'], link: 'URL del proyecto 2 completo', repository: 'Url repo', description: 'description'  },
     // Agregar más proyectos si es necesario
   ];
 

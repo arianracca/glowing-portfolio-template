@@ -37,7 +37,6 @@
   
   .project-image {
     width: 100%;
-    height: calc(100% - 6.5rem);
     object-fit: cover;
   }
   
