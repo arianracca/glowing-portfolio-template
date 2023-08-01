@@ -14,7 +14,7 @@ const StackCard: React.FC<StackCardProps> = ({ title, technologies }) => {
       <br />
       <div className={styles['stack-icons']}>
         {technologies.map((tech, index) => (
-          <div key={index} className={styles[`icon-${index + 1}`]}>
+          <div title={tech} aria-label={tech} key={index} className={styles[`icon-${index + 1}`]}>
             {getIconForTechnology(tech)}
           </div>
         ))}

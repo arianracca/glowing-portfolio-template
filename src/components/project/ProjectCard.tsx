@@ -1,21 +1,49 @@
-import React from 'react';
+import CarouselComponent from "./CarouselComponent";
+import styles from './projects.module.css';
 
 interface Project {
   title: string;
-  image: string;
+  images: string[];
   link: string;
+  repository: string;
+  description: string;
 }
 
-const ProjectCard: React.FC<Project> = ({ title, image, link }) => {
+const ProjectCard: React.FC<Project> = ({ title, images, link, repository, description }) => {
   return (
-    <a className="project" href={link} target="_blank">
-      <img className="project-image" src={image} alt={title} />
-      <p className="project-title">
-        <span className="brackets">&lt;</span>
+    <div className={styles["project-card"]}>
+
+      <div className={styles["project-image"]}>
+        <CarouselComponent  images={images}/>
+      </div>
+      <h4 className={styles["project-title"]}>
+        <span className={styles["brackets"]}>&lt;</span>
         {title}
-        <span className="brackets">&#47;&gt;</span>
-      </p>
-    </a>
+        <span className={styles["brackets"]}>&#47;&gt;</span>
+      </h4>
+      <div>
+        <p>
+          {description}
+        </p>
+      </div>
+      <div className={styles["project-btn"]}>
+        <a href={link} target="_blank" rel="noopener noreferrer" aria-label={`Deployed project ${title}`}>
+          <button className={styles["project-buttons"]}>
+            <span className={styles["brackets"]}>&lt;</span>
+              Deploy 
+            <span className={styles["brackets"]}>&#47;&gt;</span>
+          </button>
+        </a>
+        <a href={repository} target="_blank" rel="noopener noreferrer" aria-label={`Repository project ${title}`}>
+          <button className={styles["project-buttons"]}>
+            <span className={styles["brackets"]}>&lt;</span>
+              Repository 
+            <span className={styles["brackets"]}>&#47;&gt;</span>
+          </button>
+        </a>
+      </div>
+
+    </div>
   );
 };
 

@@ -42,7 +42,7 @@ body {
 
 h1 {
   font-family: 'Rajdhani', sans-serif !important;
-  color: var(--color-dark) !important;
+  color: var(--color-white) !important;
   font-size: 5rem !important;
   text-shadow: 1px 1px 15px var(--color-white);
   padding: 1rem;
@@ -71,11 +71,10 @@ p {
 }
 
 .subtitle {
-  color: var(--color-highlight) !important;
+  color: var(--color-white) !important;
   font-size: 2.6rem;
   font-weight: 350;
-  color: var(--color-primary);
-  text-shadow: 1px 1px 10px var(--color-dark);
+  text-shadow: 1px 1px 60px var(--color-white);
 }
 
 a {
@@ -343,54 +342,6 @@ button:hover {
   }
 }
 
-/* CONTACT SECTION */
-.contact-section {
-  display: flex;
-  width: 100%;
-  margin: 0rem auto;
-  padding: 1.5rem;
-  flex-wrap: wrap;
-  background-color: var(--color-primary);
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  box-shadow: 1px 1px 60px var(--color-gray);
-}
-
-.contact-section>.subtitle {
-  color: var(--color-white);
-}
-
-.contact-list {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 1.7rem;
-}
-
-.contact-via {
-  font-size: 2rem;
-  text-shadow: 2px 2px 2px var(--color-dark);
-  transition: transform 0.3s ease-out;
-}
-
-.contact-via:hover {
-  color: var(--color-secondary);
-  transition: color 1s ease-out;
-  transition: color 1s ease-out;
-}
-
-@media (max-width: 370px) {
-  .contact-header {
-    font-size: 2rem;
-  }
-
-  .contact-section>.subtitle {
-    font-size: 1.4rem;
-  }
-}
 
 /* ---------------------------------------------- */
 /* FOOTER SECTION */

@@ -47,7 +47,7 @@ const CustomNavbar = () => {
       </div>
       <Navbar.Collapse id="navbar-nav" className={navCollapseClasses}>
         <Nav className="ml-auto">
-          <Nav.Link className={styles['nav-link']} href="#">Home</Nav.Link>
+          <Nav.Link className={styles['nav-link']} href="#welcome">Home</Nav.Link>
           <Nav.Link className={styles['nav-link']} href="#about">About</Nav.Link>
           <Nav.Link className={styles['nav-link']} href="#projects">Projects</Nav.Link>
           <Nav.Link className={styles['nav-link']}  href="#contact">Contact</Nav.Link>
