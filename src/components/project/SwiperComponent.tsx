@@ -1,11 +1,14 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import 'swiper/css';
+import styles from './projects.module.css';
 
-interface Carousel {
+
+interface Swiper {
     images: string[];
   }
 
-const CarouselComponent: React.FC<Carousel> = ( { images } ) => {
+const SwiperComponent: React.FC<Swiper> = ( { images } ) => {
   const swiperParams = {
     spaceBetween: 10,
     loop: true,
@@ -20,7 +23,9 @@ const CarouselComponent: React.FC<Carousel> = ( { images } ) => {
       <Swiper {...swiperParams}>
         {images.map((image, index) => (
           <div key={index} className="swiper-slide">
-            <SwiperSlide><img src={image} title={`Image ${index}`} alt={`Image ${index}`}/></SwiperSlide> 
+            <SwiperSlide>
+              <img className={styles["swiper-image"]} src={image} title={`Image ${index}`} alt={`Image ${index}`}/>
+            </SwiperSlide> 
           </div>
         ))}
       </Swiper>
@@ -30,4 +35,4 @@ const CarouselComponent: React.FC<Carousel> = ( { images } ) => {
   );
 };
 
-export default CarouselComponent;
+export default SwiperComponent;

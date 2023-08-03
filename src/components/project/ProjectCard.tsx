@@ -1,4 +1,4 @@
-import CarouselComponent from "./CarouselComponent";
+import SwiperComponent from "./SwiperComponent";
 import styles from './projects.module.css';
 
 interface Project {
@@ -14,7 +14,7 @@ const ProjectCard: React.FC<Project> = ({ title, images, link, repository, descr
     <div className={styles["project-card"]}>
 
       <div className={styles["project-image"]}>
-        <CarouselComponent  images={images}/>
+        <SwiperComponent  images={images}/>
       </div>
       <h4 className={styles["project-title"]}>
         <span className={styles["brackets"]}>&lt;</span>
