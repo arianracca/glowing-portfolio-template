@@ -11,7 +11,7 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    background-image: url('./assets/bg-eye.webp');
+    background-image: url('src/assets/bg-eye.webp');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
