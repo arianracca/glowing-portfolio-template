@@ -54,10 +54,11 @@
   }
   
   .project-buttons {
+    font-size: 1.2rem !important;
     box-sizing: border-box;
-    min-width: 14rem;
-    display: inline-block !important;
-    margin: 0.7rem !important;
+    width: 45%;
+    display: inline-block;
+    margin: 2%;
   }
   
   .brackets {
@@ -67,6 +68,6 @@
   
   button:hover .brackets {
     color: var(--color-white) !important;
-    padding: 0 5px !important;
+    padding: 0 2px !important;
     transition: padding 2s !important;
   }
