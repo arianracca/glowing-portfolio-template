@@ -36,8 +36,16 @@
   }
   
   .project-image {
+    max-height: 200px;
     width: 100%;
     object-fit: cover;
+  }
+
+  .swiper-image {
+    display: inline-block;
+    max-height: 200px;
+    width: auto;
+    text-align: center;
   }
   
   .project-title {
