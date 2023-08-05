@@ -6,7 +6,7 @@
     align-items: center;
     margin-top: 20px;
   }
-  
+
   .social-link {
     padding: 10px 20px;
     background-color: var(--transparent);
@@ -23,5 +23,5 @@
   .social-link-btn {
     border-radius: 30% !important;
     padding: 5px 10px !important;
-    margin: 0.12rem;
+    margin: 0.14rem;
   }

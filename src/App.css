@@ -42,9 +42,10 @@ body {
 
 h1 {
   font-family: 'Rajdhani', sans-serif !important;
-  color: var(--color-dark) !important;
+  color: var(--color-white) !important;
   font-size: 5rem !important;
-  text-shadow: 1px 1px 15px var(--color-white);
+  line-height: 0.9 !important;
+  text-shadow: 1px 1px 60px var(--color-dark);
   padding: 1rem;
 }
 
@@ -71,11 +72,10 @@ p {
 }
 
 .subtitle {
-  color: var(--color-highlight) !important;
+  color: var(--color-white) !important;
   font-size: 2.6rem;
   font-weight: 350;
-  color: var(--color-primary);
-  text-shadow: 1px 1px 10px var(--color-dark);
+  text-shadow: 1px 1px 60px var(--color-white);
 }
 
 a {
@@ -120,289 +120,18 @@ button:hover {
   color: var(--color-dark);        
 }
 
-/* --------------------------------------------------------------------- */
-/* NAVIGATION BAR : TODO Refactor para llevar a customNavbar.module.css */
-.navbar {
-  display: inline-block;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 10;
-  position: fixed;
-  background: var(--color-primary);
-  background-image: linear-gradient(180deg, var(--color-primary) 25%, var(--color-secondary) 150%);
-  box-shadow: 1px 1px 60px var(--color-gray);
-}
-
-#navbar-logo {
-  border-radius: 50%;
-  box-shadow: 1px 1px 10px var(--color-white);
-}
-
-.navbar-brand {
-  border-radius: 50%;
-  padding-bottom: 0 !important;
-  padding-top: 0 !important;
-  margin: 1rem;
-}
-
-.flex-space-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  padding: 1rem;
-}
-
-.navbar-collapse {
-  justify-content: flex-end !important;
-  margin-right: 1rem;
-}
-
-.nav-list {
-  display: flex;
-  justify-content: flex-end !important;
-  margin-right: 2rem;
-}
-
-.nav-list a {
-  display: block;
-  font-size: 2.2rem;
-  padding: 2rem;
-}
-
-/* Estilos para el botón del menú hamburguesa */
-.navbar-toggler {
-  color: var(--color-white);
-  position: relative;
-  width: 30px;
-  height: 35px;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent !important;
-  border: none !important;
-  outline: none !important;
-  margin-right: 1rem;
-}
-
-
-/* Estilo para el focus en el menú hamburguesa */
-.navbar-toggler:focus {
-  box-shadow: 0 0 5px 3px var(--color-white) !important;
-}
-
-.navbar-toggler-line {
-  position: absolute;
-  width: 22px;
-  height: 2px;
-  background-color: var(--color-white);
-  border-radius: 2px;
-  transition: transform 0.2s;
-}
-
-.navbar-toggler::before,
-.navbar-toggler::after {
-  content: '';
-  position: absolute;
-  width: 22px;
-  height: 2px;
-  border-radius: 2px;
-  background-color: var(--color-white);
-  transition: transform 0.2s, opacity 0.2s;
-}
-
-/* Estilo inicial de las líneas del icono hamburguesa */
-.navbar-toggler-line {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.navbar-toggler::before {
-  top: 25%;
-  transform: translateY(0px, -50%);
-}
-
-.navbar-toggler::after {
-  bottom: 25%;
-  transform: translateY(0px, 50%);
-}
-
-/* Estilo de las líneas cuando el menú está abierto */
-.navbar-toggler.active .navbar-toggler-line {
-  opacity: 0;
-}
-
-.navbar-toggler.active::before {
-  top: 50%;
-  transform: rotate(405deg) translateY(-50%);
-}
-
-.navbar-toggler.active::after {
-  bottom: 50%;
-  transform: rotate(-405deg) translateY(50%);
-}
-
-/* Estilos para el menú desplegable */
-.navbar-nav {
-  text-align: center;
-}
-
-.nav-link {
-  font-size: 1.5rem !important;
-  padding: 1.2rem !important;
-  color: var(--color-white);
-  text-decoration: none;
-  transition: all 1s ease-in-out;
-}
-
-
-/* --------------------------------------------------------------------- */
-/* PROJECTS SECTION */
-.projects-section {
-  text-align: center;
-  padding: 10rem 2rem;
-}
-
-.projects-header {
-  margin: 0 auto 6rem auto;
-  max-width: 600px;
-  text-shadow: 1px 1px 10px var(--color-secondary);
-}
-
-.projects-grid {
-  display: grid;
-  width: 100%;
-  max-width: 1280px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 3.2rem;
-  margin: 0 auto;
-  margin-bottom: 6rem;
-}
-
-.project {
-  box-shadow: 1px 1px 60px var(--color-gray);
-  border-radius: 2px;
-  background: var(--color-primary);
-}
-
-.project-image {
-  width: 100%;
-  height: calc(100% - 6.5rem);
-  object-fit: cover;
-}
-
-.project-title {
-  font-size: 1.6rem;
-  padding: 2rem 0.5rem;
-}
-
-.buttons {
-  display: inline-block;
-  border-radius: 2px;
-  padding: 1rem 2rem;
-}
-
-.brackets {
-  color: var(--color-dark);
-  transition: color 1s ease-out;
-}
-
-.buttons-show-all {
-  font-size: 2rem;
-  background: var(--color-primary);
-  transition: background-color 1s ease-out;
-}
-
-.project:hover .brackets {
-  color: var(--color-primary);
-  padding: 0 10px;
-  transition: padding 2s;
-}
-
-.buttons-show-all:hover {
-  background: var(--color-dark);
-}
-
-@media (max-width: 370px) {
-  .projects-header {
-    font-size: 2rem;
-  }
-
-  .project-title {
-    font-size: 1.1rem;
-  }
-
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .projects-section {
-    padding: 6rem 1rem;
-  }
-}
-
-/* CONTACT SECTION */
-.contact-section {
-  display: flex;
-  width: 100%;
-  margin: 0rem auto;
-  padding: 1.5rem;
-  flex-wrap: wrap;
-  background-color: var(--color-primary);
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  box-shadow: 1px 1px 60px var(--color-gray);
-}
-
-.contact-section>.subtitle {
-  color: var(--color-white);
-}
-
-.contact-list {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 1.7rem;
-}
-
-.contact-via {
-  font-size: 2rem;
-  text-shadow: 2px 2px 2px var(--color-dark);
-  transition: transform 0.3s ease-out;
-}
-
-.contact-via:hover {
-  color: var(--color-secondary);
-  transition: color 1s ease-out;
-  transition: color 1s ease-out;
-}
-
-@media (max-width: 370px) {
-  .contact-header {
-    font-size: 2rem;
-  }
-
-  .contact-section>.subtitle {
-    font-size: 1.4rem;
-  }
-}
-
 /* ---------------------------------------------- */
 /* FOOTER SECTION */
 footer {
-  margin-top: 30px;
+  margin-top: 120px;
   padding: 20px;
   align-items: center;
   text-align: center;
   flex-direction: column;
   background: var(--color-primary);
-  background-image: linear-gradient(0deg, var(--color-primary) 35%, var(--color-secondary) 150%);
-  box-shadow: 1px 1px 60px var(--color-gray);
+  background-image: linear-gradient(180deg, var(--color-primary) 35%, var(--color-secondary) 150%);
+  /* Estilo para agregar la sombra tipo glow */
+  /* box-shadow: 1px 1px 60px var(--color-gray); */
 }
 
 footer>ul {

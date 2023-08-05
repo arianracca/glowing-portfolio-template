@@ -1,31 +1,19 @@
-import SocialLinkComponent from '../common/SocialLinkComponent';
-import styles from './welcome.module.css';
+import { SocialBar } from '../common/SocialBar';
+import styles from './styles.module.css';
+import cn from 'classnames';
+
+const sub1 = cn(styles['welcome-subtitle'], styles.sub1)
+const sub2 = cn(styles['welcome-subtitle'], styles.sub2)
 
 const WelcomeSection: React.FC = () => {
   return (
-    <section id="welcome-section" className={styles["welcome-section"]}>
+    <section id="welcome" className={styles["welcome-section"]}>
       <div className={styles["welcome-text"]}>
-        <h2 className={styles["welcome-subtitle"]}>Hello, my name is</h2>
+        <h2 className={sub1}>Hello, my name is</h2>
         <h1>Arian Racca</h1>
-        <h2 className={styles["welcome-subtitle"]}>This is my Profile</h2>
+        <h2 className={sub2}>This is my Profile</h2>
       </div>
-      <div className={styles["social-links"]}>
-        <div aria-label="LinkedIn">
-          <SocialLinkComponent socialMedia="LinkedIn" link="https://www.linkedin.com/in/arianracca" />
-        </div>
-        <div aria-label="GitHub">
-          <SocialLinkComponent socialMedia="GitHub" link="https://github.com/arianracca" />
-        </div>
-        <div aria-label="Email">
-          <SocialLinkComponent socialMedia="Email" link="mailto:info@arianracca.ar" />
-        </div>
-        <div aria-label="WhatsApp">
-          <SocialLinkComponent socialMedia="WhatsApp" link="https://wa.me/5493413555676/?text=I'm%20interested%20in%20your%20work!" />
-        </div>
-        <div aria-label="Download CV">
-          <SocialLinkComponent socialMedia="Download CV" link="https://drive.google.com/file/d/1u62YhHn7AjGtYWBbCt5TK7FhOzZXSSJw/view?usp=drive_link" />
-        </div>
-      </div>
+      <SocialBar />
     </section>
   );
 };

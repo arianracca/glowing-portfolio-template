@@ -1,5 +1,6 @@
+import { SocialBar } from '../common/SocialBar';
 import StackCard from './StackCard';
-import styles from './about.module.css';
+import styles from './styles.module.css';
 
 
 const AboutSection = () => {
@@ -31,7 +32,6 @@ const AboutSection = () => {
         'python',
         'mysql',
         'database',
-        'php'
       ],
     },
     {
@@ -52,23 +52,13 @@ const AboutSection = () => {
       technologies:
       [
         'godot',
-        'unity'
       ],
     }
     // Add more stack cards data as needed
   ];
 
-  const handleDownloadCV = () => {
-    // URL del enlace de Google Drive
-    const cvLink =
-      'https://drive.google.com/file/d/1u62YhHn7AjGtYWBbCt5TK7FhOzZXSSJw/view?usp=drive_link';
-
-    // Abrir el enlace en una nueva pestaña
-    window.open(cvLink, '_blank');
-  };
-
-
   return (
+    <section id="about">
     <div className={styles['about-section']}>
       <div className={`container ${styles['container-width']}`}>
         <div className='row'>
@@ -76,9 +66,7 @@ const AboutSection = () => {
             {/* Imagen de perfil redonda */}
             <div className={styles['profile-image']}>
               <img src="src/assets/my-photo.webp" alt="My Photo" />
-              <button className={styles['download-btn']} onClick={handleDownloadCV}>
-                Download my Resume
-              </button>
+              <SocialBar />
             </div>
           </div>
           <div className='col-lg-8'>
@@ -133,6 +121,7 @@ const AboutSection = () => {
         </div>
       </div>
     </div>
+    </section>
   );
 };
 

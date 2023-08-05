@@ -1,11 +1,9 @@
-import React from 'react';
-
 const Footer: React.FC = () => {
   return (
     <footer>
       <ul>
         <li>
-          <a href="#">Home</a>
+          <a href="#welcome">Home</a>
         </li>
         <li>
           <a href="#about">About</a>
