@@ -7,18 +7,16 @@
     z-index: 10;
     position: fixed;
     background: var(--color-primary);
-    background-image: linear-gradient(180deg, var(--color-primary) 25%, var(--color-secondary) 150%);
-    box-shadow: 1px 1px 60px var(--color-gray);
+    background-image: linear-gradient(0deg, var(--color-primary) 25%, var(--color-secondary) 150%);
   }
   
-  #navbar-logo {
-    border-radius: 50%;
+  .navbar-logo {
+    border-radius: 50%; 
     box-shadow: 1px 1px 10px var(--color-white);
   }
   
   .navbar-brand {
-    border-radius: 50%;
-    padding-bottom: 0 !important;
+    padding-bottom: 0 !important; 
     padding-top: 0 !important;
     margin: 1rem;
   }
@@ -31,22 +29,9 @@
   }
   
   .navbar-collapse {
-    justify-content: flex-end !important;
     margin-right: 1rem;
-  }
-  
-  .nav-list {
-    display: flex;
-    justify-content: flex-end !important;
-    margin-right: 2rem;
-  }
-  
-  .nav-list a {
-    display: block;
-    font-size: 2.2rem;
-    padding: 2rem;
-  }
-  
+  }  
+
   /* Estilos para el botón del menú hamburguesa */
   .navbar-toggler {
     color: var(--color-white);
@@ -62,7 +47,6 @@
     outline: none !important;
     margin-right: 1rem;
   }
-  
   
   /* Estilo para el focus en el menú hamburguesa */
   .navbar-toggler:focus {
@@ -116,7 +100,7 @@
   }
   
   .navbar-toggler.active::after {
-    bottom: 50%;
+    bottom: 50% !important;
     transform: rotate(-405deg) translateY(50%);
   }
   
@@ -126,6 +110,7 @@
   }
   
   .nav-link {
+    margin-left: 1rem;
     font-size: 1.5rem !important;
     padding: 1.2rem !important;
     color: var(--color-white);
