@@ -1,4 +1,4 @@
-import styles from './socialLink.module.css';
+import styles from './styles.module.css';
 import SocialLinkComponent from './SocialLinkComponent';
 
 export const SocialBar: React.FC = () => {

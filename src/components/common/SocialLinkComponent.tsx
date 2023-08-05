@@ -1,6 +1,6 @@
 import React from 'react';
 import getIconForSocialMedia from '../../utils/getIconForSocialMedia';
-import styles from './socialLink.module.css';
+import styles from './styles.module.css';
 
 type SocialLinkProps = {
   socialMedia: string;

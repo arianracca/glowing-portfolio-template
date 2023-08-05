@@ -44,7 +44,8 @@ h1 {
   font-family: 'Rajdhani', sans-serif !important;
   color: var(--color-white) !important;
   font-size: 5rem !important;
-  text-shadow: 1px 1px 15px var(--color-white);
+  line-height: 0.9 !important;
+  text-shadow: 1px 1px 60px var(--color-dark);
   padding: 1rem;
 }
 

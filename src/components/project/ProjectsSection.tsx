@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
-import styles from './projects.module.css';
+import styles from './styles.module.css';
 
 const ProjectsSection: React.FC = () => {
   // Array de proyectos con sus detalles

@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'swiper/css';
-import styles from './projects.module.css';
+import styles from './styles.module.css';
 
 
 interface Swiper {

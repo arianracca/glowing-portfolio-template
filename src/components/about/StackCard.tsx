@@ -1,6 +1,6 @@
 import React from 'react';
 import getIconForTechnology from '../../utils/getIconForTechnology';
-import styles from './about.module.css';
+import styles from './styles.module.css';
 
 interface StackCardProps {
   title: string;

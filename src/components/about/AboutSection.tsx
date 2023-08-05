@@ -1,6 +1,6 @@
 import { SocialBar } from '../common/SocialBar';
 import StackCard from './StackCard';
-import styles from './about.module.css';
+import styles from './styles.module.css';
 
 
 const AboutSection = () => {

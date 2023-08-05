@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import logo from '../../assets/logo-wh.png';
-import styles from './customNavbar.module.css'
+import styles from './styles.module.css'
 import cn from 'classnames';
 const CustomNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
