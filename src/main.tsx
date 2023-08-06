@@ -5,7 +5,7 @@ import Blog from "./Blog.tsx";
 import App from "./App.tsx";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-
+//TODO: update to REACT 18
 ReactDOM.render(
   <React.StrictMode>
     <Router>
