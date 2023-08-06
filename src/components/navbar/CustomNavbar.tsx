@@ -3,7 +3,18 @@ import { Navbar, Nav } from "react-bootstrap";
 import logo from "../../assets/logo-wh.png";
 import styles from "./styles.module.css";
 import cn from "classnames";
-const CustomNavbar = () => {
+
+interface Section {
+  id: string;
+  title: string;
+  href: string;
+}
+
+interface CustomNavbarProps {
+  sections: Section[];
+}
+
+const CustomNavbar: React.FC<CustomNavbarProps> = ({ sections }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleMenuToggle = () => {
@@ -11,7 +22,8 @@ const CustomNavbar = () => {
   };
 
   const navbarClasses = cn(
-    "navbar flex-space-between",
+    "navbar",
+    "flex-space-between",
     styles.navbar,
     styles["flex-space-between"],
   );
@@ -69,21 +81,15 @@ const CustomNavbar = () => {
       </div>
       <Navbar.Collapse id="navbar-nav" className={navCollapseClasses}>
         <Nav className="ml-auto">
-          <Nav.Link className={styles["nav-link"]} href="#welcome">
-            Home
-          </Nav.Link>
-          <Nav.Link className={styles["nav-link"]} href="#about">
-            About
-          </Nav.Link>
-          <Nav.Link className={styles["nav-link"]} href="#projects">
-            Projects
-          </Nav.Link>
-          <Nav.Link className={styles["nav-link"]} href="#contact">
-            Contact
-          </Nav.Link>
-          <Nav.Link className={styles["nav-link"]} href="TODO">
-            Blog
-          </Nav.Link>
+          {sections.map((section) => (
+            <Nav.Link
+              key={section.id}
+              className={styles["nav-link"]}
+              href={section.href}
+            >
+              {section.title}
+            </Nav.Link>
+          ))}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
