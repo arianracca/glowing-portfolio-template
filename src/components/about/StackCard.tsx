@@ -1,12 +1,31 @@
+import { useState } from "react";
 import getIconForTechnology from "../../utils/getIconForTechnology";
 import styles from "./styles.module.css";
+import TechnologyModal from "./TechnologyModal";
 
 interface StackCardProps {
   title: string;
-  technologies: string[];
+  technologies: Technology[];
+}
+
+interface Technology {
+  name: string;
+  certificateUrls: string[];
+  description: string;
 }
 
 const StackCard: React.FC<StackCardProps> = ({ title, technologies }) => {
+  const [selectedTechnology, setSelectedTechnology] =
+    useState<Technology | null>(null);
+
+  const handleIconClick = (technology: Technology) => {
+    setSelectedTechnology(technology);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedTechnology(null);
+  };
+
   return (
     <div className={styles["stack-card"]}>
       <h3 className={styles["stack-title"]}>{title}</h3>
@@ -14,15 +33,22 @@ const StackCard: React.FC<StackCardProps> = ({ title, technologies }) => {
       <div className={styles["stack-icons"]}>
         {technologies.map((tech, index) => (
           <div
-            title={tech}
-            aria-label={tech}
+            title={tech.name}
+            aria-label={tech.name}
             key={index}
             className={styles[`icon-${index + 1}`]}
+            onClick={() => handleIconClick(tech)}
           >
-            {getIconForTechnology(tech)}
+            {getIconForTechnology(tech.name)}
           </div>
         ))}
       </div>
+      {selectedTechnology && (
+        <TechnologyModal
+          technology={selectedTechnology}
+          onClose={handleCloseModal}
+        />
+      )}
     </div>
   );
 };

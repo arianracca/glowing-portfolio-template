@@ -2,52 +2,68 @@ import { SocialBar } from "../common/SocialBar";
 import StackCard from "./StackCard";
 import styles from "./styles.module.css";
 
-const AboutSection = () => {
+const AboutSection: React.FC = () => {
   const stackCardsData = [
     {
       title: "Frontend",
       technologies: [
-        "html5",
-        "css3",
-        "javascript",
-        "typescript",
-        "jest",
-        "react",
-        "angular",
-        "wordpress",
-        "bootstrap",
-        "material ui",
+        {
+          name: "html5",
+          description: "HTML5 Certificate Description",
+          certificateUrls: [],
+        },
+        {
+          name: "css3",
+          description: "Css3 Certificate Description",
+          certificateUrls: [],
+        },
+        {
+          name: "javascript",
+          description: "HTML5 Certificate Description",
+          certificateUrls: ["src/assets/certificates/javascript-udemy.jpg"],
+        },
+        // Agregar más tecnologías con sus certificados si es necesario
       ],
     },
     {
       title: "Backend",
       technologies: [
-        "java",
-        "springboot",
-        "spring",
-        "junit",
-        "python",
-        "mysql",
-        "database",
+        {
+          name: "java",
+          description: "Java Certificate Description",
+          certificateUrls: [],
+        },
+        {
+          name: "python",
+          description: "Python Certificate",
+          certificateUrls: [],
+        },
+        // Agregar más tecnologías con sus certificados si es necesario
       ],
     },
     {
       title: "Tools",
       technologies: [
-        "git",
-        "bitbucket",
-        "jenkins",
-        "postman",
-        "swagger",
-        "jira",
-        "kibana",
+        {
+          name: "git",
+          description: "Git Certificate Description",
+          certificateUrls: [],
+        },
+        // Agregar más tecnologías con sus certificados si es necesario
       ],
     },
     {
       title: "Game Dev",
-      technologies: ["godot"],
+      technologies: [
+        {
+          name: "godot",
+          description: "Godot Certificate Description",
+          certificateUrls: [],
+        },
+        // Agregar más tecnologías con sus certificados si es necesario
+      ],
     },
-    // Add more stack cards data as needed
+    // Agregar más tarjetas de stack según sea necesario
   ];
 
   return (
