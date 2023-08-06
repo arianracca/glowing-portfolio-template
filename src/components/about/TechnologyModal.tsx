@@ -1,4 +1,4 @@
-import React from "react";
+import getIconForTechnology from "../../utils/getIconForTechnology";
 import styles from "./styles.module.css";
 
 interface TechnologyModalProps {
@@ -22,14 +22,21 @@ const TechnologyModal: React.FC<TechnologyModalProps> = ({
         className={styles["modal-content"]}
         onClick={(e) => e.stopPropagation()}
       >
-        <h2>{technology.name}</h2>
+        <div className={styles["modal-header"]}>
+          <div className={styles["modal-icon"]}>
+            {getIconForTechnology(technology.name)}
+          </div>
+          <h2>{technology.name}</h2>
+        </div>
         <p>{technology.description}</p>
         <div className={styles["certificate-container"]}>
           {technology.certificateUrls.map((url, index) => (
             <img key={index} src={url} alt={`Certificate ${index + 1}`} />
           ))}
         </div>
-        <button onClick={onClose}>Close</button>
+        <button className={styles["close-button"]} onClick={onClose}>
+          Close
+        </button>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import getIconForTechnology from "../../utils/getIconForTechnology";
 import styles from "./styles.module.css";
 import TechnologyModal from "./TechnologyModal";
@@ -15,7 +15,8 @@ interface Technology {
 }
 
 const StackCard: React.FC<StackCardProps> = ({ title, technologies }) => {
-  const [selectedTechnology, setSelectedTechnology] = useState<Technology | null>(null);
+  const [selectedTechnology, setSelectedTechnology] =
+    useState<Technology | null>(null);
 
   const handleIconClick = (technology: Technology) => {
     setSelectedTechnology(technology);
