@@ -16,12 +16,19 @@ module.exports = {
     project: true,
     tsconfigRootDir: __dirname,
   },
-  plugins: ['react-refresh'],
+  plugins: [
+    'react-refresh',
+    'prettier'
+  ],
   rules: {
     'react-refresh/only-export-components': [
       'warn',
       { allowConstantExport: true },
     ],
     '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-unsafe-return': 'off', // TODO: mejorar return de SocialMedia
+    'prettier/prettier': 'error',
+    'prettier/prettier': 'warn'
   },
+  ignorePatterns: ['.eslintrc.cjs']
 }

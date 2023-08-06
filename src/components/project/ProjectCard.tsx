@@ -1,6 +1,6 @@
-import React from 'react';
+import React from "react";
 import SwiperComponent from "./SwiperComponent";
-import styles from './styles.module.css';
+import styles from "./styles.module.css";
 
 interface Project {
   title: string;
@@ -10,15 +10,19 @@ interface Project {
   description: string;
 }
 
-const ProjectCard: React.FC<Project> = ({ title, images, link, repository, description }) => {
-
+const ProjectCard: React.FC<Project> = ({
+  title,
+  images,
+  link,
+  repository,
+  description,
+}) => {
   const handleButtonClick = (url: string) => {
-    window.open(url, '_blank');
+    window.open(url, "_blank");
   };
 
   return (
     <div className={styles["project-card"]}>
-
       <div className={styles["project-image"]}>
         <SwiperComponent images={images} />
       </div>
@@ -28,9 +32,7 @@ const ProjectCard: React.FC<Project> = ({ title, images, link, repository, descr
         <span className={styles["brackets"]}>&#47;&gt;</span>
       </h4>
       <div>
-        <p>
-          {description}
-        </p>
+        <p>{description}</p>
       </div>
       <div className={styles["project-btn"]}>
         <button
@@ -38,7 +40,8 @@ const ProjectCard: React.FC<Project> = ({ title, images, link, repository, descr
           onClick={() => handleButtonClick(link)}
           rel="noopener noreferrer"
           aria-label={`Deployed project ${title}`}
-          title={`Deployed project ${title}`}>
+          title={`Deployed project ${title}`}
+        >
           <span className={styles["brackets"]}>&lt;</span>
           Deploy
           <span className={styles["brackets"]}>&#47;&gt;</span>
@@ -48,13 +51,13 @@ const ProjectCard: React.FC<Project> = ({ title, images, link, repository, descr
           onClick={() => handleButtonClick(repository)}
           rel="noopener noreferrer"
           aria-label={`Repository project ${title}`}
-          title={`Repository project ${title}`}>
+          title={`Repository project ${title}`}
+        >
           <span className={styles["brackets"]}>&lt;</span>
           Repository
           <span className={styles["brackets"]}>&#47;&gt;</span>
         </button>
       </div>
-
     </div>
   );
 };

@@ -1,9 +1,9 @@
-import { SocialBar } from '../common/SocialBar';
-import styles from './styles.module.css';
-import cn from 'classnames';
+import { SocialBar } from "../common/SocialBar";
+import styles from "./styles.module.css";
+import cn from "classnames";
 
-const sub1 = cn(styles['welcome-subtitle'], styles.sub1)
-const sub2 = cn(styles['welcome-subtitle'], styles.sub2)
+const sub1 = cn(styles["welcome-subtitle"], styles.sub1);
+const sub2 = cn(styles["welcome-subtitle"], styles.sub2);
 
 const WelcomeSection: React.FC = () => {
   return (
