@@ -63,7 +63,7 @@ const AboutSection = () => {
               </div>
             </div>
             <div className="col-lg-8">
-              {/* Contenido de la columna lateral a la izquierda */}
+              {/* Contenido de la columna lateral */}
               <div className={styles["about-info"]}>
                 <h2>Hello! I'm Arian</h2>
                 <div className={styles["sub-heading"]}>
