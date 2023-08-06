@@ -1,21 +1,31 @@
-import React from 'react';
-import getIconForSocialMedia from '../../utils/getIconForSocialMedia';
-import styles from './styles.module.css';
+import getIconForSocialMedia from "../../utils/getIconForSocialMedia";
+import styles from "./styles.module.css";
 
 type SocialLinkProps = {
   socialMedia: string;
   link: string;
 };
 
-const SocialLinkComponent: React.FC<SocialLinkProps> = ({ socialMedia, link }) => {
-  const Icon = getIconForSocialMedia(socialMedia);
+const SocialLinkComponent: React.FC<SocialLinkProps> = ({
+  socialMedia,
+  link,
+}) => {
+  const Icon: React.ElementType | null = getIconForSocialMedia(socialMedia);
+
+  const handleButtonClick = (url: string) => {
+    window.open(url, "_blank");
+  };
 
   return (
-    <a href={link} target="_blank" rel="noopener noreferrer" aria-label={socialMedia} title={socialMedia}>
-      <button className={styles["social-link-btn"]}>
-        {Icon && <Icon />}
-      </button>
-    </a>
+    <button
+      className={styles["social-link-btn"]}
+      onClick={() => handleButtonClick(link)}
+      rel="noopener noreferrer"
+      aria-label={socialMedia}
+      title={socialMedia}
+    >
+      {Icon && <Icon />}
+    </button>
   );
 };
 

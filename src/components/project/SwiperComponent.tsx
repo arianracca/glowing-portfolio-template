@@ -1,20 +1,19 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'swiper/css';
-import styles from './styles.module.css';
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "swiper/css";
+import styles from "./styles.module.css";
 
 interface Swiper {
-    images: string[];
-  }
+  images: string[];
+}
 
-const SwiperComponent: React.FC<Swiper> = ( { images } ) => {
+const SwiperComponent: React.FC<Swiper> = ({ images }) => {
   const swiperParams = {
     spaceBetween: 10,
     loop: true,
     navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   };
 
@@ -24,8 +23,13 @@ const SwiperComponent: React.FC<Swiper> = ( { images } ) => {
         {images.map((image, index) => (
           <div key={index} className="swiper-slide">
             <SwiperSlide>
-              <img className={styles["swiper-image"]} src={image} title={`Image ${index}`} alt={`Image ${index}`}/>
-            </SwiperSlide> 
+              <img
+                className={styles["swiper-image"]}
+                src={image}
+                title={`Image ${index}`}
+                alt={`Image ${index}`}
+              />
+            </SwiperSlide>
           </div>
         ))}
       </Swiper>

@@ -1,17 +1,25 @@
-import { FaLinkedin, FaGithub, FaEnvelope, FaWhatsapp, FaFileDownload } from 'react-icons/fa';
+import {
+  FaLinkedin,
+  FaGithub,
+  FaEnvelope,
+  FaWhatsapp,
+  FaFileDownload,
+} from "react-icons/fa";
 
-const getIconForSocialMedia = (socialMedia: string) => {
+const getIconForSocialMedia = (socialMedia: string): React.ElementType => {
   switch (socialMedia.toLowerCase()) {
-    case 'linkedin':
+    case "linkedin":
       return FaLinkedin;
-    case 'github':
+    case "github":
       return FaGithub;
-    case 'email':
+    case "email":
       return FaEnvelope;
-    case 'whatsapp':
+    case "whatsapp":
       return FaWhatsapp;
-    case 'download cv':
+    case "download cv":
       return FaFileDownload;
+    default:
+      throw new Error("Invalid social media");
   }
 };
 

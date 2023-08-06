@@ -14,14 +14,9 @@
     border-radius: 50%; 
     box-shadow: 1px 1px 10px var(--color-white);
   }
-
-  .navbar-logo:focus {
-    border-radius: 50%; 
-    outline: none !important;
-    box-shadow: 1px 1px 10px var(--color-white);
-  }
   
   .navbar-brand {
+    border-radius: 50%;   
     padding-bottom: 0 !important; 
     padding-top: 0 !important;
     margin: 1rem;

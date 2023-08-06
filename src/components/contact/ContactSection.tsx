@@ -1,5 +1,5 @@
 import { SocialBar } from "../common/SocialBar";
-import styles from './styles.module.css'
+import styles from "./styles.module.css";
 
 const ContactSection: React.FC = () => {
   return (
