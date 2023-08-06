@@ -110,6 +110,7 @@
     height: 50px;
     background-color: var(--color-white);
     border-radius: 10px;
+    cursor: pointer;
   }
   
   .stack-icons svg {
@@ -117,3 +118,58 @@
     height: 30px;
     fill: var(--color-primary);
   }
+
+
+  /* Modal styles */
+.modal-overlay {
+  /* Estilos para la superposición del modal */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  /* Estilos para el contenido del modal */
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  text-align: center;
+}
+
+.modal-content h2 {
+  /* Estilos para el título del modal */
+  color: var(--color-primary) !important;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  /* Estilos para el texto del modal */
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.modal-content img {
+  /* Estilos para la imagen del certificado */
+  max-width: 80%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* .modal-content button { */
+  /* Estilos para el botón de cerrar */
+  /* background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+} */

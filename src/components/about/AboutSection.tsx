@@ -1,53 +1,55 @@
+import React from "react";
 import { SocialBar } from "../common/SocialBar";
 import StackCard from "./StackCard";
 import styles from "./styles.module.css";
 
-const AboutSection = () => {
+const AboutSection: React.FC = () => {
   const stackCardsData = [
     {
       title: "Frontend",
       technologies: [
-        "html5",
-        "css3",
-        "javascript",
-        "typescript",
-        "jest",
-        "react",
-        "angular",
-        "wordpress",
-        "bootstrap",
-        "material ui",
+        {
+          name: "html5",
+          certificateUrls: ["html5-certificate-url"],
+          description: "HTML5 Certificate Description",
+        },
+        // Agregar más tecnologías con sus certificados si es necesario
       ],
     },
     {
       title: "Backend",
       technologies: [
-        "java",
-        "springboot",
-        "spring",
-        "junit",
-        "python",
-        "mysql",
-        "database",
+        {
+          name: "java",
+          certificateUrls: ["java-certificate-url"],
+          description: "Java Certificate Description",
+        },
+        // Agregar más tecnologías con sus certificados si es necesario
       ],
     },
     {
       title: "Tools",
       technologies: [
-        "git",
-        "bitbucket",
-        "jenkins",
-        "postman",
-        "swagger",
-        "jira",
-        "kibana",
+        {
+          name: "git",
+          certificateUrls: ["git-certificate-url"],
+          description: "Git Certificate Description",
+        },
+        // Agregar más tecnologías con sus certificados si es necesario
       ],
     },
     {
       title: "Game Dev",
-      technologies: ["godot"],
+      technologies: [
+        {
+          name: "godot",
+          certificateUrls: ["godot-certificate-url"],
+          description: "Godot Certificate Description",
+        },
+        // Agregar más tecnologías con sus certificados si es necesario
+      ],
     },
-    // Add more stack cards data as needed
+    // Agregar más tarjetas de stack según sea necesario
   ];
 
   return (
@@ -71,44 +73,7 @@ const AboutSection = () => {
                   <h4>React and Java Spring Boot</h4>
                 </div>
                 <div className={styles["about-content"]}>
-                  <p>
-                    Currently, I'm pursuing a Technical Degree in Artificial
-                    Intelligence 🤖 to satisfy my curiosity for cutting-edge
-                    technologies.
-                  </p>
-                  <p>
-                    🔧 My toolkit includes Angular, TypeScript, Python, Git, and
-                    MySQL, enabling me to take on a wide range of exciting
-                    challenges in web development. Whether building responsive
-                    frontends or robust backends, I'm ready for the task!
-                  </p>
-                  <p>
-                    👥 As a proactive and responsible team player, I thrive in
-                    collaborative environments. Effective communication and
-                    kindness form the foundation of my approach, ensuring
-                    seamless collaboration with my peers and delivering
-                    remarkable results.
-                  </p>
-                  <p>
-                    🗣️ Moreover, my background as a Psychologist plays a pivotal
-                    role in my interactions with fellow team members. My lateral
-                    thinking abilities, listening and interpretation skills, and
-                    human and efficient problem-solving approach are qualities
-                    that allow me to effectively collaborate within the team and
-                    find creative and empathetic solutions.
-                  </p>
-                  <p>
-                    💡 My passion for learning drives me to stay at the
-                    forefront, constantly updating my skills to keep up with the
-                    latest industry trends. I believe that staying abreast of
-                    emerging technologies allows my work to reach the highest
-                    quality and provide innovative solutions.
-                  </p>
-                  <p>
-                    Feel free to reach out to me for collaboration
-                    opportunities.
-                  </p>
-                  <p>🤝 Together, we will create exceptional experiences.</p>
+                  {/* Contenido del About */}
                 </div>
               </div>
             </div>
