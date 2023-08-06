@@ -6,9 +6,7 @@ import {
   FaFileDownload,
 } from "react-icons/fa";
 
-type SocialMedia = "linkedin" | "github" | "email" | "whatsapp" | "download cv";
-
-const getIconForSocialMedia = (socialMedia: SocialMedia): React.ElementType => {
+const getIconForSocialMedia = (socialMedia: string): React.ElementType => {
   switch (socialMedia.toLowerCase()) {
     case "linkedin":
       return FaLinkedin;
