@@ -19,7 +19,11 @@ const BlogSection: React.FC<BlogSectionProps> = ({ posts }) => {
             />
             <div className={styles["blog-content"]}>
               <h2 className={styles["blog-title"]}>{post.title}</h2>
-              <p>{post.content.slice(0, 200)}...</p>
+              <div
+                className={styles["blog-content"]}
+                dangerouslySetInnerHTML={{ __html: post.content.slice(0, 200) }}
+              />
+              <span>...</span>
               <div className={styles["blog-buttons"]}>
                 {/* Utiliza el componente Link de React Router para redirigir al detalle del post */}
                 <Link to={`/blog/${index}`} className={styles["blog-link"]}>

@@ -24,11 +24,6 @@
     flex-direction: column;
   }
 
-  .blog-card p {
-    font-size: 1.4rem;
-    color: var(--color-white);
-  }
-  
   .blog-image {
     max-height: 200px;
     width: auto;
@@ -36,6 +31,8 @@
   }
   
   .blog-content {
+    font-size: 1.4rem;
+    color: var(--color-white);
     flex: 2;
   }
   
@@ -126,7 +123,7 @@
   color: var(--color-white);
   margin-top: 2rem;
   column-count: 2; /* Distribuir contenido en dos columnas */
-  column-gap: 2rem; /* Espacio entre columnas */
+  column-gap: 3rem; /* Espacio entre columnas */
   padding: 2rem;
 }
 
