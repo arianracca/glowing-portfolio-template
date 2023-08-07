@@ -1,5 +1,5 @@
-import React from "react";
 import SwiperComponent from "./SwiperComponent";
+import getIconForTechnology from "../../utils/getIconForTechnology";
 import styles from "./styles.module.css";
 
 interface Project {
@@ -8,6 +8,7 @@ interface Project {
   link: string;
   repository: string;
   description: string;
+  technologies: string[];
 }
 
 const ProjectCard: React.FC<Project> = ({
@@ -16,6 +17,7 @@ const ProjectCard: React.FC<Project> = ({
   link,
   repository,
   description,
+  technologies,
 }) => {
   const handleButtonClick = (url: string) => {
     window.open(url, "_blank");
@@ -32,7 +34,14 @@ const ProjectCard: React.FC<Project> = ({
         <span className={styles["brackets"]}>&#47;&gt;</span>
       </h4>
       <div>
-        <p>{description}</p>
+        <p>{description.slice(0, 200)} ...</p>
+        <div className={styles["project-icons"]}>
+          {technologies.map((tech, index) => (
+            <div className={styles["project-icon"]} key={index}>
+              {getIconForTechnology(tech)}
+            </div>
+          ))}
+        </div>
       </div>
       <div className={styles["project-btn"]}>
         <button

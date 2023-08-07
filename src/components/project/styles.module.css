@@ -53,6 +53,34 @@
     font-size: 1.6rem;
     padding: 2rem 0.5rem;
   }
+
+  .project-icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .project-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px; /* Ajusta el ancho del icono */
+    height: 25px; /* Ajusta el alto del icono */
+    margin: 1%; /* Ajusta el margen entre los íconos */
+    background-color: var(--color-white);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .project-icon svg {
+    color: var(--color-primary);
+    width: 80%; /* Ajusta el tamaño del ícono dentro del contenedor */
+    height: auto;
+  }
   
   .project-buttons {
     font-size: 1.2rem !important;
