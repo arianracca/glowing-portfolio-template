@@ -2,7 +2,7 @@ import "./App.css";
 import BlogSection from "./components/blog/BlogSection";
 import CustomNavbar from "./components/navbar/CustomNavbar";
 import Footer from "./components/footer/Footer";
-
+import posts from "./components/blog/Posts";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function Blog() {
@@ -15,7 +15,7 @@ function Blog() {
   return (
     <div className="App">
       <CustomNavbar sections={sections} />
-      <BlogSection />
+      <BlogSection posts={posts} />
       <Footer sectionsFooter={sections} />
     </div>
   );

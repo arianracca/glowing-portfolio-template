@@ -1,30 +1,12 @@
-import React from "react";
 import styles from "./styles.module.css";
+import { Link } from "react-router-dom";
+import { Post } from "./Posts";
 
-interface Post {
-  title: string;
-  content: string;
-  image: string;
+interface BlogSectionProps {
+  posts: Post[];
 }
 
-const BlogSection: React.FC = () => {
-  // Ejemplo de datos de los posts
-  const posts: Post[] = [
-    {
-      title: "Post 1",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed accumsan, erat ut iaculis mattis, felis nisi tristique purus.",
-      image: "https://via.placeholder.com/300",
-    },
-    {
-      title: "Post 2",
-      content:
-        "Praesent eget massa sapien. Cras venenatis lorem in orci varius euismod. Curabitur tincidunt neque id turpis bibendum eleifend.",
-      image: "https://via.placeholder.com/300",
-    },
-    // Agregar más posts según sea necesario
-  ];
-
+const BlogSection: React.FC<BlogSectionProps> = ({ posts }) => {
   return (
     <section id="blog" className={styles["blog-section"]}>
       <div className={`container ${styles["blog-grid"]}`}>
@@ -37,13 +19,16 @@ const BlogSection: React.FC = () => {
             />
             <div className={styles["blog-content"]}>
               <h2 className={styles["blog-title"]}>{post.title}</h2>
-              <p>{post.content}</p>
+              <p>{post.content.slice(0, 200)}...</p>
               <div className={styles["blog-buttons"]}>
-                <button>
-                  <span className={styles["blog-brackets"]}>[</span>
-                  Read More
-                  <span className={styles["blog-brackets"]}>]</span>
-                </button>
+                {/* Utiliza el componente Link de React Router para redirigir al detalle del post */}
+                <Link to={`/blog/${index}`} className={styles["blog-link"]}>
+                  <button>
+                    <span className={styles["blog-brackets"]}>[</span>
+                    Read More
+                    <span className={styles["blog-brackets"]}>]</span>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

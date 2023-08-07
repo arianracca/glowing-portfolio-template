@@ -82,4 +82,58 @@
       padding-left: 20px;
     }
   }
+
+/* Post Detail Styles */
+.post-section {
+  margin-top: 60px;
+  margin-bottom: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--color-dark);
+}
+
+.post-card {
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  background: var(--color-primary);
+  background-image: linear-gradient(180deg, var(--color-primary) 25%, var(--color-dark) 130%);
+  box-shadow: 1px 1px 60px var(--color-gray);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post-image {
+  max-width: 100%;
+  max-height: 600px;
+  width: auto;
+  height: auto;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.post-title {
+  font-weight: bold;
+  margin-top: 3rem;
+}
+
+.post-content {
+  font-size: 1.7rem;
+  color: var(--color-white);
+  margin-top: 2rem;
+  column-count: 2; /* Distribuir contenido en dos columnas */
+  column-gap: 2rem; /* Espacio entre columnas */
+  padding: 2rem;
+}
+
+/* Estilos para viewports más pequeños (hasta 768px) */
+@media (max-width: 768px) {
+  .post-content {
+    column-count: 1; /* Mostrar contenido en una sola columna */
+  }
+}
   
