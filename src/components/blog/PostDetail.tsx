@@ -36,7 +36,10 @@ const PostDetail: React.FC<PostDetailProps> = ({ posts }) => {
             className={styles["post-image"]}
           />
           <h2 className={styles["post-title"]}>{post.title}</h2>
-          <p className={styles["post-content"]}>{post.content}</p>
+          <div
+            className={styles["post-content"]}
+            dangerouslySetInnerHTML={{ __html: post.content }}
+          />
         </div>
       </div>
       <Footer sectionsFooter={sections} />

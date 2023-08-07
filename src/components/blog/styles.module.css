@@ -24,11 +24,6 @@
     flex-direction: column;
   }
 
-  .blog-card p {
-    font-size: 1.4rem;
-    color: var(--color-white);
-  }
-  
   .blog-image {
     max-height: 200px;
     width: auto;
@@ -36,6 +31,8 @@
   }
   
   .blog-content {
+    font-size: 1.4rem;
+    color: var(--color-white);
     flex: 2;
   }
   
