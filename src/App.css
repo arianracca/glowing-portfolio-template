@@ -141,6 +141,7 @@ footer {
 footer>ul {
   display: flex;
   justify-content: center;
+  padding-left: 0 !important;
 }
 
 footer>ul>li {
