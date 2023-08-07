@@ -9,21 +9,34 @@ interface PostDetailProps {
   posts: Post[];
 }
 
+const sections = [
+  { id: "welcome", title: "Home", href: "/" },
+  { id: "blog", title: "Blog", href: "/blog" },
+  // Add more sections as needed
+];
+
 const PostDetail: React.FC<PostDetailProps> = ({ posts }) => {
   const { postId } = useParams<{ postId: string }>();
   const index = parseInt(postId);
 
   if (isNaN(index) || index < 0 || index >= posts.length) {
     // Manejo de caso cuando el índice no es válido
-    return <div>Post not found</div>;
+    return (
+      <>
+        <CustomNavbar sections={sections} />
+        <div className={`${styles["post-detail"]} ${styles["post-section"]}`}>
+          <div
+            className={`${styles["container-width"]} ${styles["post-card"]}`}
+          >
+            <h2> Post not found</h2>
+          </div>
+        </div>
+        <Footer sectionsFooter={sections} />
+      </>
+    );
   }
 
   const post = posts[index];
-  const sections = [
-    { id: "welcome", title: "Home", href: "/" },
-    { id: "blog", title: "Blog", href: "/blog" },
-    // Add more sections as needed
-  ];
 
   return (
     <>

@@ -96,7 +96,7 @@
   max-width: 1200px;
   padding: 20px;
   background: var(--color-primary);
-  background-image: linear-gradient(180deg, var(--color-primary) 25%, var(--color-dark) 130%);
+  background-image: linear-gradient(180deg, var(--color-primary) 25%, var(--color-secondary) 130%);
   box-shadow: 1px 1px 60px var(--color-gray);
   border-radius: 10px;
   display: flex;
