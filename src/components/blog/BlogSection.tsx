@@ -25,7 +25,6 @@ const BlogSection: React.FC<BlogSectionProps> = ({ posts }) => {
               />
               <span>...</span>
               <div className={styles["blog-buttons"]}>
-                {/* Utiliza el componente Link de React Router para redirigir al detalle del post */}
                 <Link to={`/blog/${index}`} className={styles["blog-link"]}>
                   <button>
                     <span className={styles["blog-brackets"]}>[</span>

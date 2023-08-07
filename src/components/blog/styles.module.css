@@ -122,15 +122,14 @@
   font-size: 1.7rem;
   color: var(--color-white);
   margin-top: 2rem;
-  column-count: 2; /* Distribuir contenido en dos columnas */
-  column-gap: 3rem; /* Espacio entre columnas */
+  column-count: 2;
+  column-gap: 3rem;
   padding: 2rem;
 }
 
-/* Estilos para viewports más pequeños (hasta 768px) */
 @media (max-width: 768px) {
   .post-content {
-    column-count: 1; /* Mostrar contenido en una sola columna */
+    column-count: 1;
   }
 }
   
