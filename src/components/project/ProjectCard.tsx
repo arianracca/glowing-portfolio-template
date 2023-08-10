@@ -1,6 +1,8 @@
+import React, { useState } from "react";
 import SwiperComponent from "./SwiperComponent";
 import getIconForTechnology from "../../utils/getIconForTechnology";
 import styles from "./styles.module.css";
+import ProjectModal from "./ProjectModal";
 
 interface Project {
   title: string;
@@ -19,6 +21,16 @@ const ProjectCard: React.FC<Project> = ({
   description,
   technologies,
 }) => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const openModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
   const handleButtonClick = (url: string) => {
     window.open(url, "_blank");
   };
@@ -37,6 +49,11 @@ const ProjectCard: React.FC<Project> = ({
       </div>
       <div>
         <p>{description.slice(0, 200)}...</p>
+        <a className={styles["more-details"]} onClick={openModal}>
+          <span className={styles["brackets"]}>[</span>
+          More Details
+          <span className={styles["brackets"]}>]</span>
+        </a>
       </div>
       <div>
         <div className={styles["project-icons"]}>
@@ -71,6 +88,19 @@ const ProjectCard: React.FC<Project> = ({
           </button>
         </div>
       </div>
+      {isModalOpen && (
+        <ProjectModal
+          project={{
+            title,
+            images,
+            link,
+            repository,
+            description,
+            technologies,
+          }}
+          onClose={closeModal}
+        />
+      )}
     </div>
   );
 };

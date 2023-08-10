@@ -168,7 +168,7 @@
 }
 
 .modal-content p {
-  color: var(--color-primary) !important;
+  color: var(--color-primary);
   margin-bottom: 20px;
 }
 
