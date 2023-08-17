@@ -9,10 +9,11 @@
   }
   
   .projects-grid {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     column-gap: 2rem;
     margin-top: 2rem;
+
   }
 
   .project-card {
@@ -21,7 +22,7 @@
     justify-content: space-between;
     background: var(--color-primary);
     background-image: linear-gradient(180deg, var(--color-primary) 25%, var(--color-secondary) 130%);
-    box-shadow: 0 1px 60px var(--color-gray);
+    box-shadow: 1px 1px 60px var(--color-gray);
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
@@ -55,6 +56,10 @@
   .project-title {
     font-size: 1.6rem;
     padding: 2rem 0.5rem;
+  }
+
+  .card-description {
+    margin-top: 1rem;
   }
 
   .more-details {
