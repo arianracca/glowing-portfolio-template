@@ -145,7 +145,17 @@
 .modal-header {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+
+/* Agrega estilos para el contenedor del title del modal */
+.modal-container-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1rem;
 }
 
 /* Styles for the modal content */
@@ -160,9 +170,7 @@
 
 /* Styles for the close button */
 .modal-close {
-  position: absolute;
-  bottom: 5rem;
-  right: 8rem;
+  display: flex;
   box-shadow: none !important;
 }
 
@@ -202,7 +210,7 @@
   height: 30%;
   font-size: 1.4rem;
   overflow-y: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 /* Styles for modal image container */

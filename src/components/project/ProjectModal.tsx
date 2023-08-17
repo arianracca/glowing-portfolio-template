@@ -18,11 +18,8 @@ interface Project {
 }
 
 const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
-  const { title, images, link, repository, description, technologies } =
+  const { title, images, description, technologies } =
     project;
-  const handleButtonModalClick = (url: string) => {
-    window.open(url, "_blank");
-  };
 
   return (
     <div className={styles["modal-overlay"]} onClick={onClose}>
@@ -31,38 +28,24 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <div className={styles["modal-header"]}>
-          <h2 className={styles["modal-title"]}>{title}</h2>
-          <div className={styles["modal-technologies"]}>
-            {technologies.map((tech, index) => (
-              <div className={styles["modal-technology-icon"]} key={index}>
-                {getIconForTechnology(tech)}
-              </div>
-            ))}
+          <div className={styles["modal-container-title"]}>
+            <h2 className={styles["modal-title"]}>{title}</h2>
+            <div className={styles["modal-technologies"]}>
+              {technologies.map((tech, index) => (
+                <div className={styles["modal-technology-icon"]} key={index}>
+                  {getIconForTechnology(tech)}
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className={styles["modal-close"]}>
+            <button onClick={onClose}> X </button>
           </div>
         </div>
         <div className={styles["modal-description"]}>{description}</div>
         <div className={styles["modal-image-container"]}>
           <SwiperComponent images={images} />
         </div>
-        <div className={styles["modal-buttons"]}>
-          <button
-            onClick={handleButtonModalClick(link)}
-            rel="noopener noreferrer"
-            className={styles["modal-button"]}
-          >
-            Deploy
-          </button>
-          <button
-            onClick={handleButtonModalClick(repository)}
-            rel="noopener noreferrer"
-            className={styles["modal-button"]}
-          >
-            Repository
-          </button>
-        </div>
-        <button className={styles["modal-close"]} onClick={onClose}>
-          Close
-        </button>
       </div>
     </div>
   );
