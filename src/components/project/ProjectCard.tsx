@@ -39,16 +39,16 @@ const ProjectCard: React.FC<Project> = ({
     <div className={styles["project-card"]}>
       <div>
         <h4 className={styles["project-title"]}>
-          <span className={styles["brackets"]}>&lt;</span>
+          <span className={styles["brackets"]}>&lt; </span>
           {title}
-          <span className={styles["brackets"]}>&#47;&gt;</span>
+          <span className={styles["brackets"]}> &#47;&gt;</span>
         </h4>
         <div className={styles["project-image"]}>
           <SwiperComponent images={images} />
         </div>
       </div>
-      <div>
-        <p>{description.slice(0, 200)}...</p>
+      <div className={styles["card-description"]}>
+        <p>{description.slice(0, 120)}...</p>
         <a className={styles["more-details"]} onClick={openModal}>
           <span className={styles["brackets"]}>[</span>
           More Details
