@@ -18,8 +18,7 @@ interface Project {
 }
 
 const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
-  const { title, images, description, technologies } =
-    project;
+  const { title, images, description, technologies } = project;
 
   return (
     <div className={styles["modal-overlay"]} onClick={onClose}>
