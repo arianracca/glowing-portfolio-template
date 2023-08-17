@@ -130,6 +130,12 @@
   justify-content: center;
   align-items: center;
   z-index: 9999;
+  .swiper-image {
+    display: inline-block;
+    max-height: 350px;
+    width: auto;
+    text-align: center;
+  }
 }
 
 /* Modal styles */
@@ -160,7 +166,6 @@
   display: inline-flex;
   align-items: center;
   gap: 2rem;
-  margin-top: 1rem;
 }
 
 /* Styles for the modal content */
@@ -168,15 +173,9 @@
   background-color: var(--color-white);
   border-radius: 10px;
   box-shadow: 1px 1px 60px var(--color-secondary);
-  padding: 20px;
+  padding: 3rem;
   width: 90%;
   height: 90%;
-}
-
-/* Styles for the close button */
-.modal-close {
-  display: flex;
-  box-shadow: none !important;
 }
 
 /* Styles for modal title */
@@ -216,6 +215,7 @@
   font-size: 1.4rem;
   overflow-y: auto;
   margin-bottom: 3rem;
+  
 }
 
 /* Styles for modal image container */
@@ -225,30 +225,15 @@
   padding: 10px;
 }
 
-/* Styles for modal buttons */
-.modal-buttons {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-
 /* Styles for modal button */
-.modal-button {
-  font-size: 1.4rem;
-  padding: 10px 20px;
-  margin: 0 10px;
-  border: none;
-  border-radius: 6px;
-  background-color: var(--color-primary);
-  color: var(--color-white);
-  transition: all 0.3s, color 0.3s;
-  box-shadow: none !important;
-}
+/* Styles for the close button */
+.modal-close {
+  display: flex;
+} 
 
-.modal-button:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
-}
+.modal-close > button {
+  box-shadow: none !important;
+} 
 
 /* Estilos para el scroll-y */
 .modal-description::-webkit-scrollbar {

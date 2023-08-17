@@ -2,6 +2,7 @@ import React from "react";
 import SwiperComponent from "./SwiperComponent";
 import getIconForTechnology from "../../utils/getIconForTechnology";
 import styles from "./styles.module.css";
+import { FaTimes } from "react-icons/fa";
 
 interface ProjectModalProps {
   project: Project;
@@ -38,17 +39,15 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
             </div>
           </div>
           <div className={styles["modal-close"]}>
-            <button onClick={onClose}> X </button>
+            <button onClick={onClose}>
+              <FaTimes />
+            </button>
           </div>
         </div>
         <div className={styles["modal-description"]}>{description}</div>
         <div className={styles["modal-image-container"]}>
           <SwiperComponent images={images} />
         </div>
-
-        <button className={styles["modal-close"]} onClick={onClose}>
-          Close
-        </button>
       </div>
     </div>
   );
