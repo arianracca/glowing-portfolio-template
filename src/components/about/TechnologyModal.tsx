@@ -1,3 +1,4 @@
+import { FaTimes } from "react-icons/fa";
 import getIconForTechnology from "../../utils/getIconForTechnology";
 import styles from "./styles.module.css";
 
@@ -23,10 +24,18 @@ const TechnologyModal: React.FC<TechnologyModalProps> = ({
         onClick={(e) => e.stopPropagation()}
       >
         <div className={styles["modal-header"]}>
-          <div className={styles["modal-icon"]}>
-            {getIconForTechnology(technology.name)}
+          <div className={styles["modal-container-title"]}>
+            <div className={styles["modal-icon"]}>
+              {getIconForTechnology(technology.name)}
+            </div>
+            <h2>{technology.name}</h2>
           </div>
-          <h2>{technology.name}</h2>
+
+          <div className={styles["modal-close"]}>
+            <button onClick={onClose}>
+              <FaTimes />
+            </button>
+          </div>
         </div>
         <p>{technology.description}</p>
         <div className={styles["certificate-container"]}>
@@ -34,9 +43,6 @@ const TechnologyModal: React.FC<TechnologyModalProps> = ({
             <img key={index} src={url} alt={`Certificate ${index + 1}`} />
           ))}
         </div>
-        <button className={styles["close-button"]} onClick={onClose}>
-          Close
-        </button>
       </div>
     </div>
   );
