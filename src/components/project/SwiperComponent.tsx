@@ -1,13 +1,19 @@
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "swiper/css";
 import styles from "./styles.module.css";
 
-interface Swiper {
+interface SwiperProps {
   images: string[];
 }
 
-const SwiperComponent: React.FC<Swiper> = ({ images }) => {
+const SwiperComponent: React.FC<SwiperProps> = ({ images }) => {
   const swiperParams = {
     spaceBetween: 10,
     loop: true,
@@ -18,23 +24,25 @@ const SwiperComponent: React.FC<Swiper> = ({ images }) => {
   };
 
   return (
-    <div>
+    <div className={styles["swiper-container"]}>
       <Swiper {...swiperParams}>
         {images.map((image, index) => (
-          <div key={index} className="swiper-slide">
-            <SwiperSlide>
-              <img
-                className={styles["swiper-image"]}
-                src={image}
-                title={`Image ${index}`}
-                alt={`Image ${index}`}
-              />
-            </SwiperSlide>
-          </div>
+          <SwiperSlide key={index}>
+            <img
+              className={styles["swiper-image"]}
+              src={image}
+              title={`Image ${index}`}
+              alt={`Image ${index}`}
+            />
+          </SwiperSlide>
         ))}
       </Swiper>
-      <div className="swiper-button-next"></div>
-      <div className="swiper-button-prev"></div>
+      <div className={styles["swiper-button-next"]}>
+        <FontAwesomeIcon icon={faChevronRight} />
+      </div>
+      <div className={styles["swiper-button-prev"]}>
+        <FontAwesomeIcon icon={faChevronLeft} />
+      </div>
     </div>
   );
 };

@@ -12,8 +12,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     column-gap: 2rem;
-    margin-top: 2rem;
-
   }
 
   .project-card {
@@ -26,6 +24,13 @@
     border-radius: 10px;
     padding: 20px;
     margin-bottom: 20px;
+
+    .swiper-image {
+      display: inline-block;
+      max-height: 200px;
+      width: auto;
+      text-align: center;
+    }
   }
   
   .projects-header {
@@ -39,13 +44,52 @@
     border-radius: 2px;
     background: var(--color-primary);
   }
-  
-  .swiper-image {
-    display: inline-block;
-    max-height: 200px;
-    width: auto;
-    text-align: center;
-  }
+
+  /* styles.module.css */
+.swiper-container {
+  position: relative;
+}
+
+.swiper-image {
+  width: 100%;
+  height: auto;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: var(--color-white);
+  background-color: none;
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  z-index: 99999;
+}
+
+.swiper-button-next {
+  right: 0%;
+}
+
+.swiper-button-prev {
+  left: 0%;
+}
+
+.swiper-button-next:hover {
+  right: -1%;
+}
+
+.swiper-button-prev:hover {
+  left: -1%;
+}
+
   
   .project-title {
     font-size: 1.6rem;
@@ -199,7 +243,6 @@
   font-size: 1.4rem;
   overflow-y: auto;
   margin-bottom: 3rem;
-  
 }
 
 /* Styles for modal image container */
