@@ -40,7 +40,12 @@ const TechnologyModal: React.FC<TechnologyModalProps> = ({
         <p>{technology.description}</p>
         <div className={styles["certificate-container"]}>
           {technology.certificateUrls.map((url, index) => (
-            <img key={index} src={url} alt={`Certificate ${index + 1}`} />
+            <img
+              loading="lazy"
+              key={index}
+              src={url}
+              alt={`Certificate ${index + 1}`}
+            />
           ))}
         </div>
       </div>
