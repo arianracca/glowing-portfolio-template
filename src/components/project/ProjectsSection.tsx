@@ -5,7 +5,7 @@ const ProjectsSection: React.FC = () => {
   // Array de proyectos con sus detalles
   const projects = [
     {
-      title: "Project 1",
+      title: "Project1",
       images: ["src/assets/bg-eye.webp", "src/assets/logo.png"],
       link: "URL del proyecto 1 completo",
       repository: "Url repo",
@@ -14,7 +14,7 @@ const ProjectsSection: React.FC = () => {
       technologies: ["React", "HTML5"],
     },
     {
-      title: "Project 2",
+      title: "Project2",
       images: ["src/assets/bg-eye.webp", "src/assets/logo.png"],
       link: "URL del proyecto 2 completo",
       repository: "Url repo",
@@ -22,7 +22,7 @@ const ProjectsSection: React.FC = () => {
       technologies: ["React", "HTML5"],
     },
     {
-      title: "Project 3",
+      title: "Project3",
       images: ["src/assets/bg-eye.webp", "src/assets/logo.png"],
       link: "URL del proyecto 2 completo",
       repository: "Url repo",
@@ -30,7 +30,7 @@ const ProjectsSection: React.FC = () => {
       technologies: ["React", "HTML5"],
     },
     {
-      title: "Project 4",
+      title: "Project4",
       images: ["src/assets/bg-eye.webp", "src/assets/logo.png"],
       link: "URL del proyecto 2 completo",
       repository: "Url repo",
@@ -47,8 +47,8 @@ const ProjectsSection: React.FC = () => {
           Let me show you some of my projects
         </h2>
         <div className={styles["projects-grid"]}>
-          {projects.map((project) => (
-            <ProjectCard key={project.title} {...project} />
+          {projects.map((project, index) => (
+            <ProjectCard key={project.title} index={index} {...project} />
           ))}
         </div>
       </div>

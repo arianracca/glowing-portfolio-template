@@ -6,6 +6,7 @@ import ProjectModal from "./ProjectModal";
 
 interface Project {
   title: string;
+  index: number;
   images: string[];
   link: string;
   repository: string;
@@ -15,6 +16,7 @@ interface Project {
 
 const ProjectCard: React.FC<Project> = ({
   title,
+  index,
   images,
   link,
   repository,
@@ -44,7 +46,7 @@ const ProjectCard: React.FC<Project> = ({
           <span className={styles["brackets"]}> &#47;&gt;</span>
         </h4>
         <div className={styles["project-image"]}>
-          <SwiperComponent images={images} />
+          <SwiperComponent index={index} images={images} />
         </div>
       </div>
       <div className={styles["card-description"]}>

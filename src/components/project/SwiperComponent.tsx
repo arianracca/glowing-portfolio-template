@@ -1,48 +1,61 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faChevronLeft,
-  faChevronRight,
-} from "@fortawesome/free-solid-svg-icons";
+import SwiperCore from "swiper";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "swiper/css";
 import styles from "./styles.module.css";
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/effect-fade";
+
+SwiperCore.use([Navigation]);
 
 interface SwiperProps {
+  index: number;
   images: string[];
 }
 
-const SwiperComponent: React.FC<SwiperProps> = ({ images }) => {
+const SwiperComponent: React.FC<SwiperProps> = ({ index, images }) => {
+  const swiperRef = useRef<SwiperCore | null>(null);
+
+  const nextButtonId = `swiper-button-next-${index}`;
+  const prevButtonId = `swiper-button-prev-${index}`;
+
   const swiperParams = {
     spaceBetween: 10,
     loop: true,
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: `#${nextButtonId}`,
+      prevEl: `#${prevButtonId}`,
     },
   };
 
   return (
     <div className={styles["swiper-container"]}>
-      <Swiper {...swiperParams}>
-        {images.map((image, index) => (
-          <SwiperSlide key={index}>
+      <Swiper
+        {...swiperParams}
+        onSwiper={(swiper) => (swiperRef.current = swiper)}
+      >
+        {images.map((image, imgIndex) => (
+          <SwiperSlide key={imgIndex}>
             <img
+              loading="lazy"
               className={styles["swiper-image"]}
               src={image}
-              title={`Image ${index}`}
-              alt={`Image ${index}`}
+              title={`Image ${imgIndex}`}
+              alt={`Image ${imgIndex}`}
             />
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className={styles["swiper-button-next"]}>
-        <FontAwesomeIcon icon={faChevronRight} />
-      </div>
-      <div className={styles["swiper-button-prev"]}>
-        <FontAwesomeIcon icon={faChevronLeft} />
-      </div>
+      <div
+        id={nextButtonId}
+        className={`${styles["swiper-button-next"]} swiper-button-next`}
+      ></div>
+      <div
+        id={prevButtonId}
+        className={`${styles["swiper-button-prev"]} swiper-button-prev`}
+      ></div>
     </div>
   );
 };
