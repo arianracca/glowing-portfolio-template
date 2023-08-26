@@ -37,7 +37,7 @@ export interface Project {
 
 //GENERAL DATA --------------------------------------
 export const generalData = {
-  logo: "../../assets/logo-wh.png", // Logo path
+  logo: "src/assets/logo-wh.png", // Logo path
   pageTitle: "Arian Racca | Portfolio", // Website Title
   // Linked Font
   fontLink:
