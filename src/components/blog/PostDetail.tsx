@@ -30,7 +30,7 @@ const PostDetail: React.FC<PostDetailProps> = ({ posts }) => {
           <div
             className={`${styles["container-width"]} ${styles["post-card"]}`}
           >
-            <h2> Post not found</h2>
+            <h2> Post not found </h2>
           </div>
         </div>
         <Footer sectionsFooter={sections} />

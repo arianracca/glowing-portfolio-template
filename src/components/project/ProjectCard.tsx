@@ -3,16 +3,7 @@ import SwiperComponent from "./SwiperComponent";
 import getIconForTechnology from "../../utils/getIconForTechnology";
 import styles from "./styles.module.css";
 import ProjectModal from "./ProjectModal";
-
-interface Project {
-  title: string;
-  index: number;
-  images: string[];
-  link: string;
-  repository: string;
-  description: string;
-  technologies: string[];
-}
+import { Project } from "../../Config";
 
 const ProjectCard: React.FC<Project> = ({
   title,
@@ -77,17 +68,19 @@ const ProjectCard: React.FC<Project> = ({
             Deploy
             <span className={styles["brackets"]}>&#47;&gt;</span>
           </button>
-          <button
-            className={styles["project-buttons"]}
-            onClick={() => handleButtonClick(repository)}
-            rel="noopener noreferrer"
-            aria-label={`Repository project ${title}`}
-            title={`Repository project ${title}`}
-          >
-            <span className={styles["brackets"]}>&lt;</span>
-            Repository
-            <span className={styles["brackets"]}>&#47;&gt;</span>
-          </button>
+          {repository && (
+            <button
+              className={styles["project-buttons"]}
+              onClick={() => handleButtonClick(repository)}
+              rel="noopener noreferrer"
+              aria-label={`Repository project ${title}`}
+              title={`Repository project ${title}`}
+            >
+              <span className={styles["brackets"]}>&lt;</span>
+              Repository
+              <span className={styles["brackets"]}>&#47;&gt;</span>
+            </button>
+          )}
         </div>
       </div>
       {isModalOpen && (
@@ -99,6 +92,7 @@ const ProjectCard: React.FC<Project> = ({
             repository,
             description,
             technologies,
+            index,
           }}
           onClose={closeModal}
         />

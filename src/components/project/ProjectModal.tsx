@@ -3,20 +3,7 @@ import SwiperComponent from "./SwiperComponent";
 import getIconForTechnology from "../../utils/getIconForTechnology";
 import styles from "./styles.module.css";
 import { FaTimes } from "react-icons/fa";
-
-interface ProjectModalProps {
-  project: Project;
-  onClose: () => void;
-}
-
-interface Project {
-  title: string;
-  images: string[];
-  link: string;
-  repository: string;
-  description: string;
-  technologies: string[];
-}
+import { ProjectModalProps } from "../../Config";
 
 const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
   const { title, images, description, technologies } = project;
@@ -46,7 +33,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
         </div>
         <div className={styles["modal-description"]}>{description}</div>
         <div className={styles["modal-image-container"]}>
-          <SwiperComponent images={images} />
+          <SwiperComponent images={images} index={0} />
         </div>
       </div>
     </div>
