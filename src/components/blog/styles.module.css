@@ -25,8 +25,8 @@
   }
 
   .blog-image {
-    max-height: 200px;
-    width: auto;
+    height: auto;
+    width: 30%;
     flex: 1;
   }
   
@@ -69,8 +69,7 @@
     }
   
     .blog-image {
-      max-height: none;
-      width: 50%;
+      width: 30%;
       margin-bottom: 0;
     }
   

@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import styles from "./styles.module.css";
-import { Post } from "./Posts";
+import { Post } from "../../Posts";
 import CustomNavbar from "../navbar/CustomNavbar";
 import Footer from "../footer/Footer";
 

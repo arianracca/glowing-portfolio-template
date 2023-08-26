@@ -6,7 +6,7 @@ import App from "./App.tsx";
 import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import PostDetail from "./components/blog/PostDetail.tsx";
-import posts from "./components/blog/Posts";
+import posts from "./Posts.tsx";
 
 //TODO: update to REACT 18
 ReactDOM.render(

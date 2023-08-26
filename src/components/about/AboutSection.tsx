@@ -9,18 +9,27 @@ const AboutSection: React.FC = () => {
       technologies: [
         {
           name: "html5",
-          description: "HTML5 Certificate Description",
-          certificateUrls: [],
+          description: "HTML5 Certificates Description",
+          certificateUrls: [
+            "https://via.placeholder.com/1000",
+            "https://via.placeholder.com/800",
+          ],
         },
         {
           name: "css3",
-          description: "Css3 Certificate Description",
-          certificateUrls: [],
+          description: "Css3 Certificates Description",
+          certificateUrls: [
+            "https://via.placeholder.com/1300",
+            "https://via.placeholder.com/500",
+          ],
         },
         {
           name: "javascript",
-          description: "HTML5 Certificate Description",
-          certificateUrls: ["src/assets/certificates/javascript-udemy.jpg"],
+          description: "HTML5 Certificates Description",
+          certificateUrls: [
+            "https://via.placeholder.com/500",
+            "https://via.placeholder.com/900",
+          ],
         },
         // Agregar más tecnologías con sus certificados si es necesario
       ],
@@ -30,13 +39,13 @@ const AboutSection: React.FC = () => {
       technologies: [
         {
           name: "java",
-          description: "Java Certificate Description",
-          certificateUrls: [],
+          description: "Java Certificates Description",
+          certificateUrls: ["https://via.placeholder.com/1000"],
         },
         {
           name: "python",
-          description: "Python Certificate",
-          certificateUrls: [],
+          description: "Python Certificates Description",
+          certificateUrls: ["https://via.placeholder.com/1200"],
         },
         // Agregar más tecnologías con sus certificados si es necesario
       ],
@@ -46,8 +55,8 @@ const AboutSection: React.FC = () => {
       technologies: [
         {
           name: "git",
-          description: "Git Certificate Description",
-          certificateUrls: [],
+          description: "Git Certificates Description",
+          certificateUrls: ["https://via.placeholder.com/300"],
         },
         // Agregar más tecnologías con sus certificados si es necesario
       ],
@@ -57,8 +66,8 @@ const AboutSection: React.FC = () => {
       technologies: [
         {
           name: "godot",
-          description: "Godot Certificate Description",
-          certificateUrls: [],
+          description: "Godot Certificates Description",
+          certificateUrls: ["https://via.placeholder.com/300"],
         },
         // Agregar más tecnologías con sus certificados si es necesario
       ],
@@ -74,7 +83,7 @@ const AboutSection: React.FC = () => {
             <div className="col-lg-4">
               {/* Imagen de perfil redonda */}
               <div className={styles["profile-image"]}>
-                <img src="src/assets/my-photo.webp" alt="My Photo" />
+                <img src="https://via.placeholder.com/300" alt="My Photo" />
                 <SocialBar />
               </div>
             </div>
