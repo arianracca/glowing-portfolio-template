@@ -9,7 +9,22 @@ import PostDetail from "./components/blog/PostDetail.tsx";
 import posts from "./Posts.tsx";
 import { generalData } from "./Config.tsx";
 
-// Set General Typo from Config to index.html
+// Set Favicon (Website logo for browser Tab) from config
+const favicon = document.querySelector("link[rel='icon']") as HTMLLinkElement;
+if (favicon) {
+  favicon.href = generalData.logo;
+} else {
+  const newFavicon = document.createElement("link");
+  newFavicon.rel = "icon";
+  newFavicon.type = "image/png";
+  newFavicon.href = generalData.logo;
+  document.head.appendChild(newFavicon);
+}
+
+// Set General Website Title (for browser Tab) from Config
+document.title = generalData.pageTitle;
+
+// Set General Typo from Config
 const link = document.createElement("link");
 link.href = generalData.typography.fontLink;
 link.rel = "stylesheet";
