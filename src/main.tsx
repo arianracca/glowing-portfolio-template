@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Blog from "./Blog.tsx";
 import App from "./App.tsx";
@@ -8,8 +8,10 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import PostDetail from "./components/blog/PostDetail.tsx";
 import posts from "./Posts.tsx";
 
-//TODO: update to REACT 18
-ReactDOM.render(
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement,
+);
+root.render(
   <React.StrictMode>
     <Router>
       <Routes>
@@ -19,5 +21,4 @@ ReactDOM.render(
       </Routes>
     </Router>
   </React.StrictMode>,
-  document.getElementById("root"),
 );
