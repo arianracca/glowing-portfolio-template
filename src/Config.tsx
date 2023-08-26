@@ -40,9 +40,9 @@ export const generalData = {
   logo: "src/assets/logo-wh.png", // Logo path
   pageTitle: "Arian Racca | Portfolio", // Website Title
   // Linked Font
-  fontLink:
-    "https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap",
   typography: {
+    fontLink:
+      "https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap",
     fontFamily: "'Rajdhani', sans-serif",
   },
   colors: {

@@ -1,18 +1,3 @@
-/* WEBSITE FONT
-Change all places where is used on this stylesheet */
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
-
-:root {
-  /* HERE YOU CHOOSE THE COLOR SCHEME */
-  --color-dark: #0b0707;
-  --color-primary: #2f492d;
-  --color-secondary: #8aba85;
-  --color-highlight: #29223a;
-  --transparent: #5e546780;
-  --color-gray: #495A59;
-  --color-white: #e4e4e4;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -33,21 +18,18 @@ Change all places where is used on this stylesheet */
 html {
   box-sizing: border-box;
   color: var(--color-white) !important;
-  /* Change using website font */
-  font-family: 'Rajdhani', sans-serif !important;
+  font-family: var(--typography) !important;
   font-size: 12px;
 }
 
 body {
-  /* Change using website font */
-  font-family: 'Rajdhani', sans-serif !important;
+  font-family: var(--typography) !important;
   background-color: var(--color-dark);
   background-image: linear-gradient(180deg, var(--color-dark) 70%, var(--color-highlight) 150%);
 }
 
 h1 {
-  /* Change using website font */
-  font-family: 'Rajdhani', sans-serif !important;
+  font-family: var(--typography) !important;
   color: var(--color-white) !important;
   font-size: 5rem !important;
   line-height: 0.9 !important;
@@ -56,29 +38,26 @@ h1 {
 }
 
 h2 {
-  /* Change using website font */
-  font-family: 'Rajdhani', sans-serif !important;
+  font-family: var(--typography) !important;
   font-size: 3rem !important;
   color: var(--color-white) !important;
 }
 
 h3 {
-  /* Change using website font */
-  font-family: 'Rajdhani', sans-serif !important;
+  font-family: var(--typography) !important;
   font-size: 2.4rem !important;
   color: var(--color-white) !important;
 }
 
 h4 {
-  /* Change using website font */
-  font-family: 'Rajdhani', sans-serif !important;
+  font-family: var(--typography) !important;
   font-size: 2rem !important;
   color: var(--color-white) !important;
 }
 
 p {
   /* Change using website font */
-  font-family: 'Rajdhani', sans-serif !important;
+  font-family: var(--typography) !important;
   font-size: 1.5rem ;
   color: var(--color-white) !important;
 
