@@ -37,8 +37,8 @@ export interface Project {
 
 //GENERAL DATA --------------------------------------
 export const generalData = {
-  logo: "src/assets/logo-wh.png", // Logo path
-  pageTitle: "Arian Racca | Portfolio", // Website Title
+  logo: "https://via.placeholder.com/300", // Logo path
+  pageTitle: "Software Dev | Portfolio", // Website Title
   // Linked Font
   typography: {
     fontLink:
@@ -58,57 +58,41 @@ export const generalData = {
 
 //WELCOME SECTION DATA ------------------------------------------
 export const welcomeData = {
-  nameTitle: "Arian Racca",
+  nameTitle: "Software Developer",
   upSubtitle: "Hello, my name is",
   downSubtitle: "This is my Profile",
+  bgImage: "https://via.placeholder.com/1280",
 };
 
 //ABOUT SECTION DATA -----------------------------------------
 export const aboutMe: AboutMe = {
   imgProfile: "https://via.placeholder.com/300",
-  name: "Hello! I'm Arian",
-  role: "Full Stack Developer",
-  mainStack: "Java Spring Boot & React",
+  name: "Hello! I'm John Smith",
+  role: "My Role",
+  mainStack: "My Main tech stack",
   // This section allows to use HTML
   content: `
-              <p>
-              Currently, I'm pursuing a Technical Degree in Artificial
-              Intelligence 🤖 to satisfy my curiosity for cutting-edge
-              technologies.
+            <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <p>
-              🔧 My toolkit includes Angular, TypeScript, Python, Git, and
-              MySQL, enabling me to take on a wide range of exciting
-              challenges in web development. Whether building responsive
-              frontends or robust backends, I'm ready for the task!
+              🔧 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <p>
-              👥 As a proactive and responsible team player, I thrive in
-              collaborative environments. Effective communication and
-              kindness form the foundation of my approach, ensuring
-              seamless collaboration with my peers and delivering
-              remarkable results.
+              👥 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <p>
-              🗣️ Moreover, my background as a Psychologist plays a pivotal
-              role in my interactions with fellow team members. My lateral
-              thinking abilities, listening and interpretation skills, and
-              human and efficient problem-solving approach are qualities
-              that allow me to effectively collaborate within the team and
-              find creative and empathetic solutions.
+              🗣️ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <p>
-              💡 My passion for learning drives me to stay at the
-              forefront, constantly updating my skills to keep up with the
-              latest industry trends. I believe that staying abreast of
-              emerging technologies allows my work to reach the highest
-              quality and provide innovative solutions.
+              💡 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
             <p>
-              Feel free to reach out to me for collaboration
-              opportunities.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
             </p>
-            <p>🤝 Together, we will create exceptional experiences.</p>
+            <p>🤝
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
             `,
 };
 
@@ -119,7 +103,8 @@ export const stackCardsData: StackCardData[] = [
     technologies: [
       {
         name: "html5",
-        description: "HTML5 Certificates Description",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         certificateUrls: [
           "https://via.placeholder.com/1000",
           "https://via.placeholder.com/800",
@@ -157,6 +142,16 @@ export const stackCardsData: StackCardData[] = [
         description: "Python Certificates Description",
         certificateUrls: ["https://via.placeholder.com/1200"],
       },
+      {
+        name: "c",
+        description: "C Certificates Description",
+        certificateUrls: ["https://via.placeholder.com/1200"],
+      },
+      {
+        name: "cobol",
+        description: "Cobol Certificates Description",
+        certificateUrls: ["https://via.placeholder.com/1200"],
+      },
       // Add more technologies with their respective descriptions and certificates
     ],
   },
@@ -168,23 +163,23 @@ export const stackCardsData: StackCardData[] = [
 export const socialMediaData = [
   {
     socialMedia: "LinkedIn",
-    link: "",
+    link: "https://www.linkedin.com/",
   },
   {
     socialMedia: "Github",
-    link: "",
+    link: "https://github.com/",
   },
   {
     socialMedia: "Email",
-    link: "",
+    link: "mailto:example@gmail.com",
   },
   {
     socialMedia: "Whatsapp",
-    link: "",
+    link: "https://wa.me/YOUR-NUMBER-HERE/?text=I'm%20interested%20in%20your%20work!",
   },
   {
-    socialMedia: "Download CV",
-    link: "https://drive.google.com/file/d/1u62YhHn7AjGtYWBbCt5TK7FhOzZXSSJw/view?usp=drive_link",
+    socialMedia: "Download Resume",
+    link: "https://your-resume-link-here.com",
   },
   //Add more social Media
 ];
