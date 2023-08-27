@@ -189,6 +189,11 @@
   margin-bottom: 1rem;
 }
 
+.certificate-description {
+  max-height: 15%;
+  overflow-y: auto;
+}
+
 .certificate-container {
   max-height: 70%;
   overflow-y: auto;
@@ -208,7 +213,7 @@
   box-shadow: none !important;
 }
 
-/* Estilos para el scroll-y */
+/* Style scroll-y for certificates */
 .certificate-container::-webkit-scrollbar {
   width: 8px;
 }
@@ -222,3 +227,16 @@
   background-color: var(--color-secondary);
 }
 
+/* Style scroll-y for description */
+.certificate-description::-webkit-scrollbar {
+  width: 8px;
+}
+
+.certificate-description::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 10px;
+}
+
+.certificate-description::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-secondary);
+}

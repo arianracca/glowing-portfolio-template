@@ -214,7 +214,6 @@ import { TbBrandReactNative, TbBrandThreejs } from "react-icons/tb";
 import { GrSolaris } from "react-icons/gr";
 import IconMaterialUi from "./icons/IconMaterialUi";
 import IconDjango from "./icons/IconDjango";
-import IconCobol from "./icons/IconCobol";
 
 const getIconForTechnology = (technology: string) => {
   switch (technology.toLowerCase()) {
@@ -231,8 +230,6 @@ const getIconForTechnology = (technology: string) => {
       return <SiCplusplus />;
     case "clojure":
       return <DiClojureAlt />;
-    case "cobol":
-      return <IconCobol />;
     case "coffeescript":
       return <DiCoffeescript />;
     case "css":
