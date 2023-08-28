@@ -26,9 +26,10 @@ module.exports = {
       { allowConstantExport: true },
     ],
     '@typescript-eslint/no-non-null-assertion': 'off',
-    '@typescript-eslint/no-unsafe-return': 'off', // TODO: mejorar return de SocialMedia
     'prettier/prettier': 'error',
     'prettier/prettier': 'warn'
   },
-  ignorePatterns: ['.eslintrc.cjs']
+  ignorePatterns: ['.eslintrc.cjs',
+  'vite.config.ts'
+]
 }

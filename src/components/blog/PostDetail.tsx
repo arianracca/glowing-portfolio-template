@@ -22,7 +22,7 @@ const PostDetail: React.FC<PostDetailProps> = ({ posts }) => {
   const index = parseInt(postId);
 
   if (isNaN(index) || index < 0 || index >= posts.length) {
-    // Manejo de caso cuando el índice no es válido
+    // Handle if the index is not valid
     return (
       <>
         <CustomNavbar sections={sections} />
