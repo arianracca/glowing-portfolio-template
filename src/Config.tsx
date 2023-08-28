@@ -39,6 +39,7 @@ export interface Project {
 export const generalData = {
   logo: "https://via.placeholder.com/300", // Logo path
   pageTitle: "Software Dev | Portfolio", // Website Title
+  footerSignature: "John Smith 2020",
   // Linked Font
   typography: {
     fontLink:
