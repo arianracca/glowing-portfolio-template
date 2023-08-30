@@ -1,7 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import styles from "./styles.module.css";
-import { Post } from "./Posts";
+import { Post } from "../../Posts";
 import CustomNavbar from "../navbar/CustomNavbar";
 import Footer from "../footer/Footer";
 
@@ -22,7 +22,7 @@ const PostDetail: React.FC<PostDetailProps> = ({ posts }) => {
   const index = parseInt(postId);
 
   if (isNaN(index) || index < 0 || index >= posts.length) {
-    // Manejo de caso cuando el índice no es válido
+    // Handle if the index is not valid
     return (
       <>
         <CustomNavbar sections={sections} />
@@ -30,7 +30,7 @@ const PostDetail: React.FC<PostDetailProps> = ({ posts }) => {
           <div
             className={`${styles["container-width"]} ${styles["post-card"]}`}
           >
-            <h2> Post not found</h2>
+            <h2> Post not found </h2>
           </div>
         </div>
         <Footer sectionsFooter={sections} />

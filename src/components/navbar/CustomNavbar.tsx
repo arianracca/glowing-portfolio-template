@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Navbar, Nav } from "react-bootstrap";
-import logo from "../../assets/logo-wh.png";
 import styles from "./styles.module.css";
 import cn from "classnames";
+import { generalData } from "../../Config";
 
 interface Section {
   id: string;
@@ -67,7 +67,12 @@ const CustomNavbar: React.FC<CustomNavbarProps> = ({ sections }) => {
     <Navbar expand="md" className={navbarClasses}>
       <div className={navContentContainerSpaceBetween}>
         <Navbar.Brand href="/" className={brandClasses}>
-          <img src={logo} alt="Logo" height="40" className={logoImageClass} />
+          <img
+            src={generalData.logo}
+            alt="Logo"
+            height="40"
+            className={logoImageClass}
+          />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls={navbarNavClasses}

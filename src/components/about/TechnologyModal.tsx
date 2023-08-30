@@ -37,7 +37,9 @@ const TechnologyModal: React.FC<TechnologyModalProps> = ({
             </button>
           </div>
         </div>
-        <p>{technology.description}</p>
+        <div className={styles["certificate-description"]}>
+          <p>{technology.description}</p>
+        </div>
         <div className={styles["certificate-container"]}>
           {technology.certificateUrls.map((url, index) => (
             <img

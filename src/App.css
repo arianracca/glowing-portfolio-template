@@ -1,15 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
-
-:root {
-  --color-dark: #0b0707;
-  --color-primary: #2f492d;
-  --color-secondary: #8aba85;
-  --color-highlight: #29223a;
-  --transparent: #5e546780;
-  --color-gray: #495A59;
-  --color-white: #e4e4e4;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -21,27 +9,27 @@
   box-sizing: inherit;
 }
 
-/* Estilo de foco para todos los elementos en la página */
+/* FOCUS STYLE FOR ALL THE PAGE */
 *:focus {
-  outline: none !important; /* Para ocultar el enfoque predeterminado del navegador */
-  box-shadow: 0 0 5px 3px var(--color-white) !important; /* Borde difuminado en blanco */
+  outline: none !important; /* Hide the standard browser focus */
+  box-shadow: 0 0 5px 3px var(--color-white) !important; /* Custom focus style */
 }
 
 html {
   box-sizing: border-box;
   color: var(--color-white) !important;
-  font-family: 'Rajdhani', sans-serif !important;
+  font-family: var(--typography) !important;
   font-size: 12px;
 }
 
 body {
-  font-family: 'Rajdhani', sans-serif !important;
+  font-family: var(--typography) !important;
   background-color: var(--color-dark);
   background-image: linear-gradient(180deg, var(--color-dark) 70%, var(--color-highlight) 150%);
 }
 
 h1 {
-  font-family: 'Rajdhani', sans-serif !important;
+  font-family: var(--typography) !important;
   color: var(--color-white) !important;
   font-size: 5rem !important;
   line-height: 0.9 !important;
@@ -50,25 +38,26 @@ h1 {
 }
 
 h2 {
-  font-family: 'Rajdhani', sans-serif !important;
+  font-family: var(--typography) !important;
   font-size: 3rem !important;
   color: var(--color-white) !important;
 }
 
 h3 {
-  font-family: 'Rajdhani', sans-serif !important;
+  font-family: var(--typography) !important;
   font-size: 2.4rem !important;
   color: var(--color-white) !important;
 }
 
 h4 {
-  font-family: 'Rajdhani', sans-serif !important;
+  font-family: var(--typography) !important;
   font-size: 2rem !important;
   color: var(--color-white) !important;
 }
 
 p {
-  font-family: 'Rajdhani', sans-serif !important;
+  /* Change using website font */
+  font-family: var(--typography) !important;
   font-size: 1.5rem ;
   color: var(--color-white) !important;
 
@@ -134,7 +123,7 @@ footer {
   flex-direction: column;
   background: var(--color-primary);
   background-image: linear-gradient(180deg, var(--color-primary) 35%, var(--color-secondary) 150%);
-  /* Estilo para agregar la sombra tipo glow */
+  /* Glow shadow for footer (optional) */
   /* box-shadow: 1px 1px 60px var(--color-gray); */
 }
 

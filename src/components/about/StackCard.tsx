@@ -33,7 +33,7 @@ const StackCard: React.FC<StackCardProps> = ({ title, technologies }) => {
       <div className={styles["stack-icons"]}>
         {technologies.map((tech, index) => (
           <div
-            title={tech.name}
+            title={tech.name.toUpperCase()}
             aria-label={tech.name}
             key={index}
             className={styles[`icon-${index + 1}`]}

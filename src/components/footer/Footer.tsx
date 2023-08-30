@@ -1,4 +1,5 @@
 import React from "react";
+import { generalData } from "../../Config";
 
 interface Section {
   id: string;
@@ -20,7 +21,7 @@ const Footer: React.FC<FooterProps> = ({ sectionsFooter }) => {
           </li>
         ))}
       </ul>
-      <span>Arian Racca 2020</span>
+      <span> {generalData.footerSignature} </span>
     </footer>
   );
 };
