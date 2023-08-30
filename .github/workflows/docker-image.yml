@@ -14,5 +14,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+# First instrution - Start the docker image
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+# Second intruction - Run in local port
+    - name: Start services with docker-compose
+      run: docker-compose up -d
