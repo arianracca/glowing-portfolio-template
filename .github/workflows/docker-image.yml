@@ -7,16 +7,22 @@ on:
     branches: [ "master" ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v3
-# First instrution - Start the docker image
+
     - name: Build the Docker image
-      run: docker-compose build . --file Dockerfile --tag glowing-portfolio:$(date +%s)
-# Second intruction - Run in local port
+      run: docker build -t my-portfolio-image .
+
+    - name: Show Docker image details
+      run: docker images
+
     - name: Start services with docker-compose
       run: docker-compose up -d
+      
+    - name: Wait for application to start
+      run: sleep 10 # Puedes ajustar el tiempo de espera según tus necesidades
+
+    
