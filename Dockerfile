@@ -5,7 +5,8 @@ FROM node:18 as build-stage
 WORKDIR /app
 
 # Copiar el archivo package.json y package-lock.json (si está disponible)
-COPY package*.json ./app/
+COPY package.json ./app/
+COPY package-lock.json ./app/
 
 # Instalar las dependencias del proyecto
 RUN npm install
@@ -17,7 +18,7 @@ COPY ./ ./app/
 RUN  npm run build
 
 # HTTPS=true  && --ssl-cert ".crt" --ssl-key ".crt.key"
-#serve -s build --listen 8580 --ssl-cert ".crt" --ssl-key ".crt.key"
+# serve -s build --listen 8580 --ssl-cert ".crt" --ssl-key ".crt.key"
 
 # Stage 1, based on Nginx, to have only the compiled app, ready for production with Nginx
 FROM nginx:1.15
